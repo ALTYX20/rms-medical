@@ -1,0 +1,90 @@
+<div id="e-commerce-product" class="page-layout simple tabbed">
+
+    <!-- HEADER -->
+    <div class="page-header bg-primary text-auto row no-gutters align-items-center justify-content-between p-6">
+  
+        <div class="row no-gutters align-items-center">
+  
+            <a [routerLink]="['/']" routerLinkActive="router-link-active"  class="btn btn-icon mr-4">
+                <i class="icon icon-arrow-left"></i>
+            </a>
+  
+            <div class="product-image mr-4">
+                <img src="../../../assets/assets/images/ecommerce/product-image-placeholder.png">
+            </div>
+  
+            <div>Edit Product</div>
+        </div>
+  
+        <button type="button" class="btn btn-light" disabled>
+            SAVE
+        </button>
+  
+    </div>
+    <!-- / HEADER -->
+  
+    <!-- CONTENT -->
+    <div class="page-content">
+  
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+  
+            <li class="nav-item">
+                <a class="nav-link btn active" id="basic-info-tab" data-toggle="tab" href="#basic-info-tab-pane" role="tab" aria-controls="basic-info-tab-pane" aria-expanded="true">Basic Info</a>
+            </li>
+  
+  
+        </ul>
+  
+        <div class="tab-content">
+  
+            <div class="tab-pane fade show active" id="basic-info-tab-pane" role="tabpanel" aria-labelledby="basic-info-tab">
+  
+                <div class="card p-6">
+  
+                    <form [formGroup]="productForm" (ngSubmit)="submit()">
+  
+                        <div class="form-group">
+                            <input type="text" class="form-control" aria-describedby="product name" formControlName="nom"/>
+                            <label>Product Name</label>
+                        </div>
+  
+                        <div class="form-group">
+                            <textarea class="form-control" aria-describedby="product description" rows="5" formControlName="description"></textarea>
+                            <label>Product Description</label>
+                        </div>
+  
+                        <div class="form-group">
+                            <input type="text" class="form-control" aria-describedby="product categories" formControlName="type"/>
+                            <label>Categories</label>
+                        </div>
+  
+                        <div class="form-group">
+                            <input type="text" class="form-control" aria-describedby="product price" formControlName="prix"/>
+                            <label>Price</label>
+                        </div>
+  
+                        <div class="form-group">
+                          <input type="text" class="form-control" aria-describedby="product project" formControlName="project"/>
+                          <label>Project</label>
+                      </div>
+  
+                        <div class="form-group">
+                          <input type="file" class="form-control" aria-describedby="product photo" />
+                          <label>Photo</label>
+                      </div>
+  
+                        <div class="form-group">
+                          <input type="submit" class="form-control btn btn-dark" aria-describedby="product tags" value="Save Product"/>
+  
+                      </div>
+  
+  
+                    </form>
+                </div>
+            </div>
+  
+        </div>
+    </div>
+    <!-- / CONTENT -->
+  </div>
+  

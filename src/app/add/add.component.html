@@ -1,0 +1,94 @@
+<div class="content-wrapper">
+    <div class="content custom-scrollbar">
+  
+        <div id="login" class="p-8">
+  
+            <div class="form-wrapper md-elevation-8 p-8">
+  
+                
+  
+                <div class="title mt-4 mb-8">Register a new Account</div>
+  
+                <form name="loginForm" [formGroup]="registerForm" (ngSubmit)="login()" novalidate>
+
+                    <div class="form-group mb-4">
+                        <input type="email" class="form-control" id="loginFormInputEmail" aria-describedby="emailHelp" placeholder=" " formControlName="company" required/>
+                        <label for="loginFormInputEmail">company</label>
+                    </div>
+  
+                  <div class="form-group mb-4">
+                      <input type="email" class="form-control" id="loginFormInputEmail" aria-describedby="emailHelp" placeholder=" " formControlName="email" required/>
+                      <label for="loginFormInputEmail">Email address</label>
+                  </div>
+  
+                  <div class="form-group mb-4">
+                      <input type="password" class="form-control" id="loginFormInputPassword" placeholder="Password" formControlName="motpass" required/>
+                      <label for="loginFormInputPassword">Password</label>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <input type="password" class="form-control" id="loginFormConfirmPassword" placeholder="Password" formControlName="confpass" required/>
+                    <label for="loginFormConfirmPassword">Confirm Password</label>
+                </div>
+
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control" id="loginFormInputName" aria-describedby="emailHelp" placeholder=" " formControlName="nom" required/>
+                    <label for="loginFormInputName">Name</label>
+                </div>
+
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control" id="loginFormInputSurname" aria-describedby="emailHelp" placeholder=" " formControlName="prenom" required/>
+                    <label for="loginFormInputSurname">Surname</label>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="inputState">Sex</label>
+                    <select id="inputState" class="form-control" formControlName="sexe" required>
+                      <option>homme</option>
+                      <option>femme</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group mb-4">
+                    <input type="date" class="form-control" id="loginFormInputDate" aria-describedby="emailHelp" placeholder=" " formControlName="dateNaissance" required/>
+                    <label for="loginFormInputDate">Date</label>
+                </div>
+
+
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control" id="loginFormInputAddress" aria-describedby="emailHelp" placeholder=" " formControlName="adresse" required/>
+                    <label for="loginFormInputAddress">Address</label>
+                </div>
+
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control" id="loginFormInputCity" aria-describedby="emailHelp" placeholder=" " formControlName="city" required/>
+                    <label for="loginFormInputCity">City</label>
+                </div>
+
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control" id="loginFormInputCode" aria-describedby="emailHelp" placeholder=" " formControlName="codepostal" required/>
+                    <label for="loginFormInputCode">Postal Code</label>
+                </div>
+
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control" id="loginFormInputPhone" aria-describedby="emailHelp" placeholder=" " formControlName="numTel" required/>
+                    <label for="loginFormInputPhone">Telephone Number</label>
+                </div>
+  
+                  <button type="submit" class="submit-button btn btn-block btn-secondary my-4 mx-auto" aria-label="LOG IN" [disabled]="registerForm.invalid">
+                      SIGN UP
+                  </button>
+  
+                </form>
+  
+                <div class="register d-flex flex-column flex-sm-row align-items-center justify-content-center mt-8 mb-6 mx-auto">
+                    <span class="text mr-sm-2">Already have an account?</span>
+                    <a class="link text-secondary" routerLink="/login">Login</a>
+                </div>
+  
+            </div>
+        </div>
+  
+    </div>
+  </div>
+  
