@@ -1,0 +1,132 @@
+<div id="e-commerce-products" class="page-layout carded full-width">
+
+    <div class="top-bg bg-primary"></div>
+  
+    <!-- CONTENT -->
+    <div class="page-content-wrapper">
+  
+        <!-- HEADER -->
+        <div class="page-header light-fg row no-gutters align-items-center justify-content-between">
+  
+            <!-- APP TITLE -->
+            <div class="col-12 col-sm">
+  
+                <div class="logo row no-gutters justify-content-center align-items-start justify-content-sm-start">
+                    <div class="logo-icon mr-3 mt-1">
+                        <i class="icon-cube-outline s-6"></i>
+                    </div>
+                    <div class="logo-text">
+                        <div class="h4">Company</div>
+                        <div class="">Total Companys: {{compList.length}}</div>
+                    </div>
+                </div>
+  
+            </div>
+            <!-- / APP TITLE -->
+  
+            <!-- SEARCH -->
+            <div class="col search-wrapper px-2">
+  
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-icon">
+                            <i class="icon icon-magnify"></i>
+                        </button>
+                    </span>
+                    <input id="products-search-input" type="text" class="form-control" placeholder="Search" aria-label="Search" />
+                </div>
+  
+            </div>
+            <!-- / SEARCH -->
+  
+            <div class="col-auto">
+                <a [routerLink]="['/addproduct']" routerLinkActive="router-link-active"  class="btn btn-light">ADD NEW Company</a>
+            </div>
+  
+        </div>
+        <!-- / HEADER -->
+  
+        <div class="page-content-card">
+  
+            <table id="e-commerce-products-table" class="table dataTable">
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="table-header">
+                                <span class="column-title">ID</span>
+                            </div>
+                        </th>
+  
+                        <th>
+                            <div class="table-header">
+                                <span class="column-title">Image</span>
+                            </div>
+                        </th>
+  
+                        <th>
+                            <div class="table-header">
+                                <span class="column-title">Name</span>
+                            </div>
+                        </th>
+  
+                        <th>
+                            <div class="table-header">
+                                <span class="column-title">Sector</span>
+                            </div>
+                        </th>
+  
+                        <th>
+                            <div class="table-header">
+                                <span class="column-title">Activity territories</span>
+                            </div>
+                        </th>
+  
+                        <th>
+                            <div class="table-header">
+                                <span class="column-title">Staff count</span>
+                            </div>
+                        </th>
+  
+                        <th>
+                            <div class="table-header">
+                                <span class="column-title">Status</span>
+                            </div>
+                        </th>
+  
+                        <th>
+                            <div class="table-header">
+                                <span class="column-title">Actions</span>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+  
+                <tbody>
+  
+                    <tr *ngFor="let item of compList">
+                        <td>{{item.id}}</td>
+                        <td>
+                            <img class="product-image" src="../../../assets/assets/images/ecommerce/product-image-placeholder.png">
+                        </td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.sector}}</td>
+                        <td>{{item.activity}}</td>
+                        <td>{{item.staffcount}}</td>
+                        <td>{{item.status}}</td>
+                        <td>
+                            <button type="button" (click)="editComp(item)" class="btn btn-icon" aria-label="Product details">
+                                <i class="icon icon-pencil s-4"></i>
+                            </button>
+                            <button type="button" (click)="deleteComp(item.id)" class="btn btn-icon" aria-label="Product details">
+                              <i class="icon icon-trash s-4"></i>
+                          </button>
+                        </td>
+                    </tr>
+  
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- / CONTENT -->
+  </div>
+  
