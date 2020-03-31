@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { DataserviceService } from 'src/app/service/dataservice.service';
+import { DataserviceService } from 'src/app/services/dataservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -12,7 +12,7 @@ export class ListReferenceComponent implements OnInit {
 
   references:any[];
 
-  constructor(private dataService:DataserviceService,private route: ActivatedRoute, private router: Router,private formBuilder:FormBuilder) { }
+  constructor(private dataService:DataserviceService,private route: ActivatedRoute, private router: Router) { }
 
 
 
@@ -39,7 +39,7 @@ export class ListReferenceComponent implements OnInit {
       })
     }
   modifyReference(item){
-      this.router.navigateByUrl('/modifyreference', { state: item });
+      this.router.navigateByUrl('/modify-reference', { state: item });
     }
   }
 

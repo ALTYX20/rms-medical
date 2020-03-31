@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { DataserviceService } from 'src/app/service/dataservice.service';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+
+import { DataserviceService } from 'src/app/services/dataservice.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,10 +12,10 @@ import { Router } from '@angular/router';
 })
 export class AddReferenceComponent implements OnInit {
 
-referenceForm:FormGroup=new FormGroup({
-    id:new FormControl('',Validators.required),
-     title:new FormControl('',Validators.required),
-   description:new FormControl('',Validators.required),
+  public referenceForm:FormGroup=new FormGroup({
+    id:new FormControl(''),
+     title:new FormControl(''),
+   description:new FormControl(''),
   
      
    })
@@ -24,7 +26,7 @@ referenceForm:FormGroup=new FormGroup({
      const form = this.referenceForm.value;
      this.dataService.addReference(form).subscribe(res=>{
        console.log(res);
-       this.router.navigate(['listReference'])
+       this.router.navigate(['list-reference'])
      })
    }
   ngOnInit(): void {
