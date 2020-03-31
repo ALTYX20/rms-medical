@@ -5,16 +5,11 @@
     class="page-header bg-primary text-auto row no-gutters align-items-center justify-content-between p-6"
 >
     <div class="row no-gutters align-items-center">
-        <a
-            [routerLink]="['/']"
-            routerLinkActive="router-link-active"
-            class="btn btn-icon mr-4"
-        >
+        <a [routerLinkActive ]="['/']" routerLinkActive="router-link-active" class="btn btn-icon mr-4">
             <i class="icon icon-arrow-left"></i>
         </a>
 
     
-
         <div>Add Reference</div>
     </div>
 
@@ -35,8 +30,7 @@
                 role="tab"
                 aria-controls="basic-info-tab-pane"
                 aria-expanded="true"
-                >Basic Info</a
-            >
+                >Basic Info</a>
         </li>
     </ul>
 
@@ -48,17 +42,8 @@
             aria-labelledby="basic-info-tab"
         >
             <div class="card p-6">
-                <form [formGroup]="referenceForm" (ngSubmit)="submit()">
-                    <div class="form-group">
-                        <input
-                            type="text"
-                            class="form-control"
-                            aria-describedby="title"
-                                    formControlName="title"
-                        />
-                        <label>Reference</label>
-                    </div>
-
+                <form [formGroup]="referenceForm"(ngSubmit)="submit()">
+                   
                     <div class="row">
                         <div class="form-group col-6">
                             <input
@@ -83,16 +68,16 @@
 
                     
                         <div class="form-group col-6">
-                            <input
-                                type="text"
+                            <textarea
+                              type="text"
                                 class="form-control"
                                 aria-describedby="description"
-                                formControlName="description"
-                            />
+                                formControlName="description">
+                            </textarea>  
                             <label>description</label>
                         </div>
-
-                      </div>
+                   </div>
+                  
                       <div class="form-group">
                             <input
                                 type="submit"
@@ -100,8 +85,8 @@
                                 aria-describedby="Referenceadd"
                                 value="Add Reference"
                             />
-                        </div>
-                   
+                       
+                    </div>
                    </form>
             </div>
         </div>

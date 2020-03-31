@@ -1,6 +1,4 @@
 import { DashboardComponent } from './component/dashboard/dashboard.component';
-import { ListpresentationComponent } from './component/listpresentation/listpresentation.component';
-import { AddpresentationComponent } from './component/addpresentation/addpresentation.component';
 import { ListcompanyComponent } from './component/listcompany/listcompany.component';
 import { AddcompanyComponent } from './component/addcompany/addcompany.component';
 import { ListprojectComponent } from './component/listproject/listproject.component';
@@ -9,7 +7,7 @@ import { ListproductComponent } from './component/listproduct/listproduct.compon
 import { AddproductComponent } from './component/addproduct/addproduct.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, RouterLink } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AuthGuard } from './guards/auth.guard';
@@ -17,6 +15,13 @@ import { AddComponent } from './add/add.component';
 import { ModifyproductComponent } from './component/modifyproduct/modifyproduct.component';
 import { ModifyprojectComponent } from './component/modifyproject/modifyproject.component';
 import { ModifycompanyComponent } from './component/modifycompany/modifycompany.component';
+import { AddReferenceComponent } from './component/add-reference/add-reference.component';
+import { ListReferenceComponent } from './component/list-reference/list-reference.component';
+import { ListPresentationComponent } from './component/list-presentation/list-presentation.component';
+import { AddPresentationComponent } from './component/add-presentation/add-presentation.component';
+import { ModifyPresentationComponent } from './component/modify-presentation/modify-presentation.component';
+import { ModifyReferenceComponent } from './component/modify-reference/modify-reference.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -33,8 +38,15 @@ const routes: Routes = [
     {path:'addcompany', component: AddcompanyComponent},
     {path:'editcompany', component: ModifycompanyComponent},
     {path: 'listcompany', component: ListcompanyComponent},
-    {path:'addpresentation', component: AddpresentationComponent},
-    {path: 'listpresentation', component: ListpresentationComponent},
+    {path:'add-presentation', component: AddPresentationComponent},
+    {path: 'list-presentation', component: ListPresentationComponent},
+    {path:'modifyPresentation', component: ModifyPresentationComponent},
+
+    {path:'add-reference', component: AddReferenceComponent},
+    {path: 'list-reference', component: ListReferenceComponent},
+    {path:'modify-reference', component: ModifyReferenceComponent},
+
+
   ],canActivate:[AuthGuard]},
 
 
@@ -48,7 +60,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
+  imports: [RouterModule.forRoot(routes),ReactiveFormsModule
+  ],
+  exports: [RouterModule,RouterLink  ]})
 export class AppRoutingModule { }
