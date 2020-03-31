@@ -23,7 +23,7 @@ export class AuthService {
         this.errorReporter.next(res);
         return;
       }
-      if(res==="user dosent exist"){
+      if(res==="user doesn't exist"){
         this.errorReporter.next(res);
         return;
       }
@@ -33,7 +33,7 @@ export class AuthService {
       }
       this.user.next(res);
     },err=>{
-      this.errorReporter.next(err.error.msg);
+      this.errorReporter.next(err.statusText);
       console.log(err)
     })
     return this.user.asObservable();

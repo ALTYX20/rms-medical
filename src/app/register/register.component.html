@@ -1,763 +1,713 @@
 <div class="content-wrapper page">
   <div class="content custom-scrollbar">
-
-      <div id="login" class="p-8 ">
-
-        <div  class="auth overflow">
-
-          <mat-horizontal-stepper class="container mt-5" #stepper>
-              <mat-step>
-
-      <h1 class="text-center mt-5 text-bold text-blue">CHOOSE YOUR PRICIE</h1>
-
-         <div class="row mt-5">
-             <div class="col-6">
-                  <h3>choose your level of users</h3>
-             </div>
-
-             <div class="col-6">
-                 <select name="" id="" class="form-control">
-                     <option value=""><p> Users &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span>20 DT</span></p></option>
-                     <option value="">15 Users  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>40 DT</span></option>
-                     <option value="">50 Users  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <span>65 DT</span></option>
-                     <option value="">Unlimited users  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span>80 DT</span> </option>
-
-
-
-                 </select>
-          </div>
-         </div>
-
-          <button mat-flat-button color="primary" matStepperNext class="mt-5" style="float: right;">Next</button>
-              </mat-step>
-
-              <mat-step>
-
-                  <h3 class="text-center text-bold mt-4">ROCOMMENDATION</h3>
-                  <p class="text-center lead">Select your RMS offer associated with your need</p>
-
-                  <div class="row mt-5">
-                      <div class="col-6">
-                          <div class="row">
-
-                            <img src="../../assets/best.png" style="width:75px" class="" alt="">
-
-                          </div>
-                      </div>
-                      <div class="col-6 text-center pl-5" style="margin-left: auto" >
-
-                          <p>135 din HT / mois </p>
-                          <p>soit 160.65 din TTC / mois </p>
-
-
-                      </div>
-                  </div>
-                  <hr>
-
-
-
-
-
-
-
-
-                  <div class="row">
-                      <div class="col-md-4">
-                        <label for="selectSubscribe" class="control-label">Choose your subscribe period</label>
-                      </div>
-                      <div class="col-md-8">
-                        <select id="selectSubscribe" class="form-control" >
-                          <option value="12" selected="selected">12 Months</option>
-                          <option value="24">24 Months</option>
-                          <option value="36">36 Months</option>
-                          <option value="60">60 Months</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <br/>
-                    <br/>
-                    <br/>
-                    <br/>
-
-
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-4">
-                          <label for="selectDatabase" class="control-label">Choose a database associated with your need</label>
-                        </div>
-                        <div class="col-8 ">
-                          <select id="selectDatabase" class="form-control" >
-                            <option value="20" selected="selected">10 GB Space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <span>
-                                <h1 style="color:green;text-align:right">20 ᴰᵀ
-                                </h1>
-                              </span>
-                            </option>
-                            <option value="50">50 GB Space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">50 ᴰᵀ
-                              </h1>
-                            </option>
-                            <option value="120">100 GB Space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <span>
-                                <h1 style="color:green;text-align:right">120 ᴰᵀ
-                                </h1>
-                              </span>
-                            </option>
-                            <option value="210">250 GB Space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">210 ᴰᵀ
-                              </h1>
-                            </option>
-                            <option value="470">500 GB Space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">470 ᴰᵀ
-                              </h1>
-                            </option>
-                            <option value="800">1000 GB Space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">800 ᴰᵀ
-                              </h1>
-                            </option>
-                            <option value="1600">2000 GB Space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">1600 ᴰᵀ
-                              </h1>
-                            </option>
-                            <option value="3000">5000 GB Space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">3000 ᴰᵀ
-                              </h1>
-                            </option>
-                            <option value="5000">Unlimited storage Space&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">5000 ᴰᵀ
-                              </h1>
-                            </option>
-                          </select>
-                        </div>
-                      </div>
-
-
-                    </div>
-
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-md-4">
-                          <label for="selectSLA" class="control-label">Choose the SLA associated with your need</label>
-                        </div>
-
-                        <div class="col-md-8">
-                          <select id="selectSLA" class="form-control" >
-                            <option value="15" selected="selected">
-                              <strong>Three SLA Event/Metric Types</strong>(First Response | Update | Solved)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">15
-                                <sup>ᴰᵀ</sup>
-                              </h1>
-                            </option>
-                            <option value="30">
-                              <strong>Additional SLA Event/Metric Types</strong>(Assignment | Workaround | Custom)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">30
-                                <sup>ᴰᵀ</sup>
-                              </h1>
-                            </option>
-                            <option value="40">
-                              <strong>Multiple SLA Event Types & Advanced SLA Workflow Models</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">40
-                                <sup>ᴰᵀ</sup>
-                              </h1>
-                            </option>
-                          </select>
-                        </div>
-                      </div>
-
-                    </div>
-
-
-
-                    <div class="form-group">
-                      <div class="row">
-                        <div class="col-md-4">
-                          <label for="selectSupport" class="control-label">Choose the support associated with your need</label>
-                        </div>
-                        <div class="col-md-8 ">
-                          <select id="selectSupport" class=" form-control" >
-                            <option value="0">No support</option>
-                            <option value="20" selected="selected">1 day support / month&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">20
-                                <sup>ᴰᵀ</sup>
-                              </h1>
-                            </option>
-                            <option value="65">5 days support / month&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">65
-                                <sup>ᴰᵀ</sup>
-                              </h1>
-                            </option>
-                            <option value="150">10 day support / month&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">150
-                                <sup>ᴰᵀ</sup>
-                              </h1>
-                            </option>
-                            <option value="180">Unlimited hour of support&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                              <h1 style="color:green;text-align:right">180
-                                <sup>ᴰᵀ</sup>
-                              </h1>
-                            </option>
-
-                          </select>
-                        </div>
-                      </div>
-
-                    </div>
-
-
-                    <div style="padding-left: 40px;padding-right: 40px">
-
-                      <br/>
-                      <div  style="color:black;margin-left: 20px;margin-right: 20px;text-align: left">
-                        <div class="row">
-                          <h4 class="col-md-2 text-bold">Support & SLA </h4>
-                          <h6 class="col-md-2" style="color: red;padding-top: 5px">"Free offer"</h6>
-                        </div>
-                        <br>
-                        <ul>
-                          <li class="pull-left">Multiple SLA Plan's,and Assistant</li>
-                          <br/>
-                          <li class="pull-left">Pre-warming & Beach Notification's</li>
-                          <br/>
-                          <li class="pull-left">Business Hours Measurement</li>
-                          <br/>
-                          <li class="pull-left">We provide technical support all RMS services released to General Availability, including Backup,
-                            <br/> through RMS Support, starting at 0.0dt/month. Biling and subscription management support is provided at no cost.</li>
-                          <br/>
-                          <li class="pull-left">We guarantee at least 99.9% availability of the backup and restore functionality of the RMS Backup service.</li>
-                          <br/>
-                          <br/>
-                          <li class="pull-left">Availability is calculated over a yearly billing cycle.</li>
-                          <br/>
-                          <li class="pull-left">RMS Backup uses Block Blob storage for backing up your instances</li>
-                          <br/>
-                          <br>
-                          <br>
-                          <br>
-                          <div class="row">
-                            <h4 class="col-md-2 text-bold">Other Options</h4>
-                            <h6 class="col-md-2" style="color: red;padding-top: 5px">"Free offer"</h6>
-                          </div>
-                          <br>
-                          <li class="pull-left">Ultimited trafic</li>
-                          <br/>
-                          <li class="pull-left">Free domain</li>
-                          <br/>
-                          <li class="pull-left">SSH Access (Certifica SSL EV)</li>
-                          <br/>
-                          <li class="pull-left">Free acces to documentation</li>
-                          <br/>
-                          <li class="pull-left">Free acces to user manuel</li>
-                          <br/>
-                          <li class="pull-left">Free acces to forum</li>
-                          <br/>
-                        </ul>
-
-                      </div>
-
-                      <br/>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  <div class="mt-5" style="float: right;">
-
-
-                      <button  mat-stroked-button color="primary"  matStepperPrevious>Previous</button>
-
-                      <button  mat-flat-button color="primary" class="mx-2" matStepperNext>Next</button>
-
-                  </div>
-                      </mat-step>
-
-                      <mat-step>
-
-
-                          <h1 style="color:black;" class="fs-title text-center">
-                              <b>Summary</b>
-                          </h1>
-                          <h3 class="fs-subtitle text-center">Preview your order</h3>
-                          <br/>
-                          <br/>
-
-
-                          <div class="table-responsive">
-                              <table class="table">
-                                  <thead>
-                                      <tr>
-                                          <th WIDTH="30%">Users Roles</th>
-                                          <th  WIDTH="30%">Number of roles</th>
-                                          <th  WIDTH="12%">Unit price</th>
-                                          <th style="text-align: right" WIDTH="18%">Price without tax</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <tr>
-                                          <th style="color:black;" scope="row">Admin</th>
-                                          <td class="info">2 admin</td>
-                                          <td>119.760 DT</td>
-                                          <td style="text-align: right" class="info">119.760 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th style="color:black;" scope="row">Manager</th>
-                                          <td class="info">2 manager</td>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th style="color:black;" scope="row">Editor</th>
-                                          <td class="info">1 editor</td>
-                                          <td>119.760 DT</td>
-                                          <td style="text-align: right" class="info">119.760 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th style="color:black;" scope="row">Viewer</th>
-                                          <td class="info">1 viewer</td>
-                                          <td>119.760 DT</td>
-                                          <td style="text-align: right" class="info">119.760 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <td style="text-align: left; border-bottom:0.5px solid lightgrey" ROWSPAN=2 COLSPAN=2 WIDTH="82%">Sub total</td>
-                                          <td style="text-align: right;border-bottom:0.5px solid lightgrey" ROWSPAN=2 COLSPAN=2 WIDTH="18%">119.76 din</td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-
-                          <br/>
-
-                          <div class="table-responsive">
-                              <table class="table">
-                                  <thead>
-                                      <tr>
-                                          <th style="text-align: left" WIDTH="30%">Database</th>
-                                          <th  WIDTH="30%">Amount</th>
-                                          <th  WIDTH="12%">Unit price</th>
-                                          <th style="text-align: right" WIDTH="18%">Price without tax</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <tr>
-                                          <th style="color:black;" scope="row">10 Gb Space</th>
-                                          <td class="info">1</td>
-                                          <td>20.000 DT</td>
-                                          <td style="text-align: right" class="info">20.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <td style="text-align: left; border-bottom:0.5px solid lightgrey" ROWSPAN=2 COLSPAN=2 WIDTH="82%">Sub total</td>
-                                          <td style="text-align: right;border-bottom:0.5px solid lightgrey" ROWSPAN=2 COLSPAN=2 WIDTH="18%">20.00 din</td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-
-
-
-                          <br/>
-
-                          <div class="table-responsive">
-                              <table class="table">
-                                  <thead>
-                                      <tr>
-                                          <th style="text-align: left" WIDTH="60%">SLA</th>
-                                          <th  WIDTH="12%">Unit price</th>
-                                          <th style="text-align: right" WIDTH="18%">Price without tax</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <tr>
-                                          <th style="color:black" scope="row">Three SLA Event/Metric Types(First Response | Update | Solved) </th>
-                                          <td>20.000 DT</td>
-                                          <td style="text-align: right" class="info">20.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <td style="text-align: left; border-bottom:0.5px solid lightgrey" ROWSPAN=2 COLSPAN=2 WIDTH="82%">Sub total</td>
-                                          <td style="text-align: right;border-bottom:0.5px solid lightgrey" ROWSPAN=2 COLSPAN=2 WIDTH="18%">20.00 din</td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-
-
-
-                          <br/>
-
-                          <div class="table-responsive">
-                              <table class="table">
-                                  <thead>
-                                      <tr>
-                                          <th style="text-align: left" WIDTH="60%">Support</th>
-                                          <th  WIDTH="12%">Unit price</th>
-                                          <th style="text-align: right" WIDTH="18%">Price without tax</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <tr>
-                                          <th style="color:black;" scope="row">1 day support / month</th>
-                                          <td>20.000 DT</td>
-                                          <td style="text-align: right" class="info">20.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <td style="text-align: left; border-bottom:0.5px solid lightgrey" ROWSPAN=2 COLSPAN=2 WIDTH="82%">Sub total</td>
-                                          <td style="text-align: right;border-bottom:0.5px solid lightgrey" ROWSPAN=2 COLSPAN=2 WIDTH="18%">20.00 din</td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-
-
-
-                          <br/>
-
-                          <div class="table-responsive">
-                              <table class="table">
-                                  <thead>
-                                      <tr>
-                                          <th style="text-align: left" WIDTH="60%">Others</th>
-                                          <th  WIDTH="12%">Unit price</th>
-                                          <th style="text-align: right" WIDTH="18%">Price without tax</th>
-                                      </tr>
-                                  </thead>
-                                  <tbody>
-                                      <tr>
-                                          <th scope="row">Multiple SLA Plan's, and Assistant</th>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th scope="row">Pre-warning & Breach Notification's</th>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th scope="row">Business Hours Measurement</th>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th scope="row">We provide technical support for all RMS services released to General Availability, including Backup, through RMS
-                                              Support
-                                          </th>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th scope="row">We guarantee at least 99.9% availability of the backup and restore functionality of the RMS Backup service.</th>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th scope="row">RMS Backup uses Block Blob storage for backing up your instances</th>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th scope="row">Ultimited traffic</th>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th scope="row">Free domain</th>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th scope="row">SSH Access (Certificat SSL EV)</th>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th scope="row">Free access to documentation</th>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th scope="row">Free access to user manuel</th>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <th scope="row">Free access to forum anuel</th>
-                                          <td>0.000 DT</td>
-                                          <td style="text-align: right" class="info">0.000 DT</td>
-                                      </tr>
-                                      <tr>
-                                          <td style="text-align: left; border-bottom:0.5px solid lightgrey" ROWSPAN=2 COLSPAN=2 WIDTH="82%">Sub total</td>
-                                          <td style="text-align: right;border-bottom:0.5px solid lightgrey" ROWSPAN=2 COLSPAN=2 WIDTH="18%">20.00 din</td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-
-
-                          <div class="row">
-                              <div class="col-md-4">
-
-                              </div>
-                              <div class="col-md-4 col-md-offset-4">
-
-
-                                  <table class="table">
-                                      <tbody>
-                                          <tr>
-                                              <td class="left">
-                                                  <strong>Users Roles</strong>
-                                              </td>
-                                              <td class="right">119,76 din</td>
-                                          </tr>
-                                          <tr>
-                                              <td class="left">
-                                                  <strong>Database</strong>
-                                              </td>
-                                              <td class="right">20,00 din</td>
-                                          </tr>
-                                          <tr>
-                                              <td class="left">
-                                                  <strong>SLA</strong>
-                                              </td>
-                                              <td class="right">20,00 din</td>
-                                          </tr>
-                                          <tr>
-                                              <td class="left">
-                                                  <strong>Support</strong>
-                                              </td>
-                                              <td class="right">20,00 din</td>
-                                          </tr>
-                                          <tr>
-                                              <td class="left">
-                                                  <strong>Offers</strong>
-                                              </td>
-                                              <td class="right">00,00 din</td>
-                                          </tr>
-                                          <tr>
-                                              <td class="left">
-                                                  <strong>Total without tax</strong>
-                                              </td>
-                                              <td class="right">
-                                                  <strong>119,76 din</strong>
-                                              </td>
-                                          </tr>
-                                          <tr>
-                                              <td class="left">
-                                                  <strong>TVA</strong>
-                                              </td>
-                                              <td class="right">
-                                                  <strong>23,35 din</strong>
-                                              </td>
-                                          </tr>
-                                          <tr>
-                                              <td style="border-bottom:0.5px solid lightgrey" class="left">
-                                                  <strong>Total TTC</strong>
-                                              </td>
-                                              <td style="border-bottom:0.5px solid lightgrey" class="right">
-                                                  <strong>143,11 din</strong>
-                                              </td>
-                                          </tr>
-                                      </tbody>
-                                  </table>
-
-                              </div>
-                          </div>
-
-
-                          <hr style="border-bottom:1px dotted lightgray" />
-
-
-
-                          <div class="mt-5" style="float: right;">
-
-
-                            <button  mat-stroked-button color="primary"  matStepperPrevious>Previous</button>
-
-                            <button  mat-flat-button color="primary" class="mx-2" matStepperNext>Next</button>
-
-
-                          </div>
-                              </mat-step>
-
-                              <mat-step>
-
-                                  <div class="row text-center">
-                                      <div>
-                                        <!--<img class="" src="images/1/logoRMS.png" width="150" height="80">-->
-                                        <img src="../../assets/rms logo.png" style="margin-left:45%;" height="100">
-
-                                      </div>
-                                    </div>
-                                    <br>
-
-
-
-
-                                    <!--	<h2 class="fs-title"  Style="border-bottom:2px solid deepskyblue"  border-sizing="100px" align="center"><br/>Sign in with RMS</h2>
+    <div id="login" class="">
+      <div class="auth overflow custom-scrollbar">
+        <mat-horizontal-stepper linear="false" class="container mt-5" #stepper>
+          <mat-step>
+            <div id="logo" class="row text-center">
+              <div>
+                <!--<img class="" src="images/1/logoRMS.png" width="150" height="80">-->
+                <img src="../../assets/rms logo.png" height="100" />
+              </div>
+            </div>
+            <br />
+
+            <!--	<h2 class="fs-title"  Style="border-bottom:2px solid deepskyblue"  border-sizing="100px" align="center"><br/>Sign in with RMS</h2>
                                     <hr Style="border-bottom:2px solid deepskyblue" style="color:#cfdaeb" width="13%" class="col-lg-pull-4" >
                                     <hr Style="border-bottom:2px solid lightgray;color:#cfdaeb" width="13%" align="center" >-->
 
-                                    <div class="row">
-                                      <div class="col-md-4"></div>
-                                      <div class="col-md-4">
-                                        <hr Style="border-bottom:2px solid deepskyblue;color:#cfdaeb;padding-left: 200px;padding-right: 100px" width="13%">
-                                      </div>
-                                      <div class="col-md-4"></div>
-
-                                    </div>
-
-                                    <h3 class="fs-title" align="center">Sign in with RMS</h3>
-
-
-
-                                    <!-- Login-->
-      <div class="row">
-
-
-
-      <div class="col-6" style="height:350px;">
-
-        <div class="card">
-          <div class="card-header">
-            I'm already an RMS customer
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-
-            <form [formGroup]="loginForm" (ngSubmit)="login(stepper)">
-              <div class="m-3">
-                  <input
-                      class="form-control"
-                      name="email"
-                      id="emailLogin"
-                      type="email"
-                      placeholder="Email address"
-                      formControlName="email"
-                      required
-                  />
+            <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                <hr
+                  Style="border-bottom:2px solid deepskyblue;color:#cfdaeb;padding-left: 200px;padding-right: 100px"
+                  width="13%"
+                />
               </div>
-          
-              <div class="m-3">
-                  <input
-                      class="form-control"
-                      id="password"
-                      type="password"
-                      placeholder="Password"
-                      formControlName="motpass"
-                      required
-                  />
+              <div class="col-md-4"></div>
+            </div>
+
+            <h3 class="fs-title" align="center">Sign in with RMS</h3>
+
+            <!-- Login-->
+            <div class="row">
+              <div class="col-md-6" style="height:350px;">
+                <div class="card">
+                  <div class="card-header">
+                    I'm already an RMS customer
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+
+                    <form [formGroup]="loginForm" (ngSubmit)="login(stepper)">
+                      <div class="m-3">
+                        <input
+                          class="form-control"
+                          name="email"
+                          id="emailLogin"
+                          type="email"
+                          placeholder="Email address"
+                          formControlName="email"
+                          required
+                        />
+                      </div>
+
+                      <div class="m-3">
+                        <input
+                          class="form-control"
+                          id="password"
+                          type="password"
+                          placeholder="Password"
+                          formControlName="motpass"
+                          required
+                        />
+                      </div>
+
+                      <!--<input type="submit" value="Login">-->
+                      <input
+                        type="submit"
+                        class="btn btn-primary m-3 "
+                        value="Log in"
+                      />
+                    </form>
+                  </div>
+                </div>
               </div>
-          
-              <!--<input type="submit" value="Login">-->
-              <input type="submit" class="btn btn-primary m-3 " value="Log in" />
+
+              <!-- CreateAccount-->
+              <div class="col-md-6" style="height:350px;">
+                <div class="card">
+                  <div class="card-header">
+                    I'm new to RMS
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+
+                    <div class="pull-left" style="padding-left:20px">
+                      <p>Create an RMS account for :</p>
+                    </div>
+                    <br />
+                    <br />
+                    <div style="padding-left:60px">
+                      <ul>
+                        <li class="pull-left">Manage your services</li>
+                        <br />
+                        <li class="pull-left">
+                          Manage your orders in progress
+                        </li>
+                        <br />
+                        <li class="pull-left">
+                          Manage your bills and payment methods
+                        </li>
+                        <br />
+                      </ul>
+                      <br />
+                    </div>
+
+                    <button
+                      type="button"
+                      class="btn btn-primary m-3 "
+                      matStepperNext
+                    >
+                      Add Company
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Forgot Password-->
+            <div id="divForgotPassword" style="display: none;">
+              <div id="container-login">
+                <br />
+                <div class="form__field">
+                  <input
+                    class="form-control"
+                    id="emailPwdForgot"
+                    type="email"
+                    style="width:55%"
+                    placeholder="Email address"
+                    required
+                  />
+                </div>
+                <br />
+                <input
+                  type="submit"
+                  class="btn btn-info prism zeroclip"
+                  style="padding: 10px 50px;color:black"
+                  value="Send"
+                />
+                <br />
+                <br />
+                <p>
+                  <a href="#">
+                    <span class="glyphicon glyphicon-edit"></span> Return</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <!-- <div class="mt-5" style="float: right;margin-top: 80px;">
+              <button mat-stroked-button color="primary" matStepperPrevious>
+                Previous
+              </button>
+
+              <button
+                mat-flat-button
+                color="primary"
+                class="mx-2"
+                matStepperNext
+                [disabled]="!isUserLoggedIn"
+              >
+                Next
+              </button>
+            </div> -->
+          </mat-step>
+
+          <mat-step>
+            <h1 style="color:black;" class="fs-title text-center">
+              <b>Personal Information</b>
+            </h1>
+            <form [formGroup]="personalInfo">
+
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  formControlName="name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input
+                id="email"
+                  type="email"
+                  class="form-control"
+                  formControlName="email"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="activity">Activity</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="activity"
+                  formControlName="activity"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="address">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  formControlName="address"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="numtel">Telephone number</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="numtel"
+                  formControlName="numtel"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="website">Website</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="website"
+                  formControlName="website"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="sector">Sector</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="sector"
+                  formControlName="sector"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                  type="text"
+                  class="form-control"
+                  id="description"
+                  formControlName="description"
+                  required
+                ></textarea>
+              </div>
+
+              
+            </form>
+            <div class="mt-5" style="float: right;margin-top: 80px;">
+              <button mat-stroked-button color="primary" class="mx-2" matStepperPrevious>
+                Previous
+              </button>
+
+              <button
+                mat-flat-button
+                color="primary"
+                class="mx-2"
+                matStepperNext
+                [disabled]="personalInfo.invalid"
+              >
+                Next
+              </button>
+            </div>
+          </mat-step>
+
+          <mat-step>
+            <h1 class="text-center mt-5 text-bold text-black">
+              Number Of Users
+            </h1>
+
+            <div class="row mt-5">
+              <div class="col-6">
+                <h3>choose your number of users</h3>
+              </div>
+
+              <div class="col-6">
+                  <select name="" id="" class="form-control" [formControl]="nbOfUsers" required>
+                    <option value="6"
+                      ><p>
+                        6 Users
+                        <span>20 DT</span>
+                      </p></option
+                    >
+                    <option value="15"
+                      >15 Users
+                      
+                      <span>40 DT</span></option
+                    >
+                    <option value="50"
+                      >50 Users
+                      
+                      <span>65 DT</span></option
+                    >
+                    <option value="0"
+                      >Unlimited users
+                      
+                      <span>80 DT</span>
+                    </option>
+                  </select>
+
+              </div>
+            </div>
+
+            <div class="mt-5" style="float: right;margin-top: 80px;">
+              <button mat-stroked-button color="primary" class="mx-2" matStepperPrevious>
+                Previous
+              </button>
+
+              <button
+              mat-flat-button
+              color="primary"
+              matStepperNext
+              class="mx-2"
+              style="float: right;"
+              [disabled]="nbOfUsers.invalid"
+            >
+              Next
+            </button>
+            </div>
+            
+          </mat-step>
+
+          <mat-step>
+            <h1 class="text-center mt-5 text-bold text-black">
+              Users
+            </h1>
+            <p *ngIf="quotaExceeded" style="color: red;">Number of users has exceeded the quota</p>
+            <form [formGroup]="addUserForm" class="form-inline" (ngSubmit)="addUser()">
+              <label class="sr-only" for="inlineFormInputName1">Name</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName1" placeholder="Name" formControlName="name" required>
+            
+              <label class="sr-only" for="inlineFormInputName2">Name</label>
+              <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Email" formControlName="email" required>
+
+              <label class="sr-only" for="inlineFormInputName3">Name</label>
+              <select class="form-control mb-2 mr-sm-2" id="inlineFormInputName3" formControlName="role" required>
+                <option selected>Type</option>
+                <option value="admin">Admin</option>
+                <option value="manager">Manager</option>
+                <option value="editor">Editor</option>
+                <option value="viewer">Viewer</option>
+              </select>
+            
+              <button type="submit" class="btn btn-primary mb-2" [disabled]="addUserForm.invalid">ADD</button>
+            </form>
+            <mat-list>
+              <div mat-subheader>Admins</div>
+              <mat-list-item *ngFor="let a of admin">
+                <mat-icon mat-list-icon>account_box</mat-icon>
+                <div mat-line>{{a.name}}</div>
+                <div mat-line> {{a.email}} </div>
+              </mat-list-item>
+              <mat-divider></mat-divider>
+              <div mat-subheader>Managers</div>
+              <mat-list-item *ngFor="let m of manager">
+                <mat-icon mat-list-icon>account_box</mat-icon>
+                <div mat-line>{{m.name}}</div>
+                <div mat-line> {{m.email}} </div>
+              </mat-list-item>
+              <div mat-subheader>Editors</div>
+              <mat-list-item *ngFor="let e of editor">
+                <mat-icon mat-list-icon>account_box</mat-icon>
+                <div mat-line>{{e.name}}</div>
+                <div mat-line> {{e.email}} </div>
+              </mat-list-item>
+              <div mat-subheader>Viewers</div>
+              <mat-list-item *ngFor="let v of viewer">
+                <mat-icon mat-list-icon>account_box</mat-icon>
+                <div mat-line>{{v.name}}</div>
+                <div mat-line> {{v.email}} </div>
+              </mat-list-item>
+            </mat-list>
+            <div class="mt-5" style="float: right;margin-top: 80px;">
+              <button mat-stroked-button color="primary" matStepperPrevious>
+                Previous
+              </button>
+
+              <button
+                mat-flat-button
+                color="primary"
+                class="mx-2"
+                matStepperNext
+                [disabled]="staffcount == 0"
+              >
+                Next
+              </button>
+            </div>
+          </mat-step>
+
+          <mat-step>
+            <form [formGroup]="technicalInfo">
+            <h3 class="text-center text-bold mt-4">ROCOMMENDATION</h3>
+            <p class="text-center lead">
+              Select your RMS offer associated with your need
+            </p>
+
+            <div class="row mt-5">
+              <div class="col-6">
+                <div class="row">
+                  <img
+                    src="../../assets/best.png"
+                    style="width:75px"
+                    class=""
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-6 text-center pl-5" style="margin-left: auto">
+                <p>135 din HT / mois</p>
+                <p>soit 160.65 din TTC / mois</p>
+              </div>
+            </div>
+            <hr />
+
+            <div class="row">
+              <div class="col-md-4">
+                <label for="selectSubscribe" class="control-label" style="font-size: 16px;"
+                  >Choose your subscribe period</label
+                >
+              </div>
+              <div class="col-md-8">
+                <select id="selectSubscribe" class="form-control" formControlName="period_subscription" required>
+                  <option value="12" selected="selected">12 Months</option>
+                  <option value="24">24 Months</option>
+                  <option value="36">36 Months</option>
+                  <option value="60">60 Months</option>
+                </select>
+              </div>
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <div class="form-group">
+              <div class="row">
+                <div class="col-4">
+                  <label for="selectDatabase" class="control-label"
+                    >Choose a database associated with your need</label
+                  >
+                </div>
+                <div class="col-8 ">
+                  <select id="selectDatabase" class="form-control" formControlName="databasesize" required>
+                    <option value="20" selected="selected"
+                      >10 GB
+                      Space
+                      <span>
+                        <h1 style="color:green;text-align:right">20 ᴰᵀ</h1>
+                      </span>
+                    </option>
+                    <option value="50"
+                      >50 GB
+                      Space
+                      <h1 style="color:green;text-align:right">50 ᴰᵀ</h1>
+                    </option>
+                    <option value="120"
+                      >100 GB
+                      Space
+                      <span>
+                        <h1 style="color:green;text-align:right">120 ᴰᵀ</h1>
+                      </span>
+                    </option>
+                    <option value="210"
+                      >250 GB
+                      Space
+                      <h1 style="color:green;text-align:right">210 ᴰᵀ</h1>
+                    </option>
+                    <option value="470"
+                      >500 GB
+                      Space
+                      <h1 style="color:green;text-align:right">470 ᴰᵀ</h1>
+                    </option>
+                    <option value="800"
+                      >1000 GB
+                      Space
+                      <h1 style="color:green;text-align:right">800 ᴰᵀ</h1>
+                    </option>
+                    <option value="1600"
+                      >2000 GB
+                      Space
+                      <h1 style="color:green;text-align:right">1600 ᴰᵀ</h1>
+                    </option>
+                    <option value="3000"
+                      >5000 GB
+                      Space
+                      <h1 style="color:green;text-align:right">3000 ᴰᵀ</h1>
+                    </option>
+                    <option value="5000"
+                      >Unlimited storage
+                      Space
+                      <h1 style="color:green;text-align:right">5000 ᴰᵀ</h1>
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="selectSLA" class="control-label"
+                    >Choose the SLA associated with your need</label
+                  >
+                </div>
+
+                <div class="col-md-8">
+                  <select id="selectSLA" class="form-control" formControlName="slatype" required>
+                    <option value="15" selected="selected">
+                      <strong>Three SLA Event/Metric Types</strong>(First
+                      Response | Update |
+                      Solved)&nbsp;&nbsp;&nbsp;&nbsp;
+                      <h1 style="color:green;text-align:right">
+                        15
+                        <sup>ᴰᵀ</sup>
+                      </h1>
+                    </option>
+                    <option value="30">
+                      <strong>Additional SLA Event/Metric Types</strong
+                      >(Assignment | Workaround |
+                      Custom)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <h1 style="color:green;text-align:right">
+                        30
+                        <sup>ᴰᵀ</sup>
+                      </h1>
+                    </option>
+                    <option value="40">
+                      <strong
+                        >Multiple SLA Event Types & Advanced SLA Workflow
+                        Models</strong
+                      >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <h1 style="color:green;text-align:right">
+                        40
+                        <sup>ᴰᵀ</sup>
+                      </h1>
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="selectSupport" class="control-label"
+                    >Choose the support associated with your need</label
+                  >
+                </div>
+                <div class="col-md-8 ">
+                  <select id="selectSupport" class=" form-control" formControlName="supporttype" required>
+                    <option value="0">No support</option>
+                    <option value="20" selected="selected"
+                      >1 day support /
+                      month
+                      <h1 style="color:green;text-align:right">
+                        20
+                        <sup>ᴰᵀ</sup>
+                      </h1>
+                    </option>
+                    <option value="65"
+                      >5 days support /
+                      month
+                      <h1 style="color:green;text-align:right">
+                        65
+                        <sup>ᴰᵀ</sup>
+                      </h1>
+                    </option>
+                    <option value="150"
+                      >10 day support /
+                      month
+                      <h1 style="color:green;text-align:right">
+                        150
+                        <sup>ᴰᵀ</sup>
+                      </h1>
+                    </option>
+                    <option value="180"
+                      >Unlimited hour of
+                      support
+                      <h1 style="color:green;text-align:right">
+                        180
+                        <sup>ᴰᵀ</sup>
+                      </h1>
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding-left: 40px;padding-right: 40px">
+              <br />
+              <div
+                style="color:black;margin-left: 20px;margin-right: 20px;text-align: left"
+              >
+                <div class="row">
+                  <h4 class="col-md-2 text-bold">Support & SLA</h4>
+                  <h6 class="col-md-2" style="color: red;padding-top: 5px">
+                    "Free offer"
+                  </h6>
+                </div>
+                <br />
+                <ul>
+                  <li class="pull-left">Multiple SLA Plan's,and Assistant</li>
+                  <br />
+                  <li class="pull-left">Pre-warming & Beach Notification's</li>
+                  <br />
+                  <li class="pull-left">Business Hours Measurement</li>
+                  <br />
+                  <li class="pull-left">
+                    We provide technical support all RMS services released to
+                    General Availability, including Backup, <br />
+                    through RMS Support, starting at 0.0dt/month. Biling and
+                    subscription management support is provided at no cost.
+                  </li>
+                  <br />
+                  <li class="pull-left">
+                    We guarantee at least 99.9% availability of the backup and
+                    restore functionality of the RMS Backup service.
+                  </li>
+                  <br />
+                  <br />
+                  <li class="pull-left">
+                    Availability is calculated over a yearly billing cycle.
+                  </li>
+                  <br />
+                  <li class="pull-left">
+                    RMS Backup uses Block Blob storage for backing up your
+                    instances
+                  </li>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <div class="row">
+                    <h4 class="col-md-2 text-bold">Other Options</h4>
+                    <h6 class="col-md-2" style="color: red;padding-top: 5px">
+                      "Free offer"
+                    </h6>
+                  </div>
+                  <br />
+                  <li class="pull-left">Ultimited trafic</li>
+                  <br />
+                  <li class="pull-left">Free domain</li>
+                  <br />
+                  <li class="pull-left">SSH Access (Certifica SSL EV)</li>
+                  <br />
+                  <li class="pull-left">Free acces to documentation</li>
+                  <br />
+                  <li class="pull-left">Free acces to user manuel</li>
+                  <br />
+                  <li class="pull-left">Free acces to forum</li>
+                  <br />
+                </ul>
+              </div>
+
+              <br />
+            </div>
+
+            <div class="mt-5" style="float: right;">
+              <button mat-stroked-button color="primary" matStepperPrevious>
+                Previous
+              </button>
+
+              <button
+                mat-flat-button
+                color="primary"
+                class="mx-2"
+                matStepperNext
+                [disabled]="technicalInfo.invalid"
+              >
+                Next
+              </button>
+            </div>
           </form>
+          </mat-step>
 
-
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-        <!-- CreateAccount-->
-        <div class="col-md-6" style="height:350px;" >
-
-
-        <div class="card">
-            <div class="card-header">
-                I'm new to RMS
-            </div>
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-
-              <div class="pull-left" style="padding-left:20px">
-
-                  <p>Create an RMS account for :</p>
-
-                </div>
-                <br/>
-                <br/>
-                <div style="padding-left:60px">
-                  <ul>
-                    <li class="pull-left">Manage your services</li>
-                    <br/>
-                    <li class="pull-left">Manage your orders in progress</li>
-                    <br/>
-                    <li class="pull-left">Manage your bills and payment methods</li>
-                    <br/>
-                  </ul>
-                  <br/>
-                </div>
-
-
-                   <!--<input type="submit" value="Login">-->
-                   <input type="button" class="btn btn-primary m-3 "  value="Create an account" routerLink="/add"  />
-
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-                                    <!-- Forgot Password-->
-                                    <div id="divForgotPassword" style="display: none;">
-                                      <div id="container-login">
-                                        <br/>
-                                        <div class="form__field">
-
-                                            <input class="form-control" id="emailPwdForgot" type="email" style="width:55%" placeholder="Email address" required>
-
-                                        </div>
-                                        <br/>
-                                        <input type="submit" class="btn btn-info prism zeroclip" style="padding: 10px 50px;color:black" value="Send" />
-                                        <br/>
-                                        <br/>
-                                        <p>
-                                          <a href="#" >
-                                            <span class="glyphicon glyphicon-edit"></span> Return</a>
-                                        </p>
-                                      </div>
-                                    </div>
-
-                                    <div class="mt-5" style="float: right;margin-top: 80px;">
-
-                                      <button  mat-stroked-button color="primary"  matStepperPrevious>Previous</button>
-
-                                      <button  mat-flat-button color="primary" class="mx-2" matStepperNext [disabled]="!isUserLoggedIn">Next</button>
-
-
-
-                                    </div>
-
-
-                                      </mat-step>
-
-
-
-                                      <mat-step>
-
-
-                                          <h3 class="text-center">Contracts</h3>
+          <mat-step>
+            <h3 class="text-center">Contracts</h3>
             <h4 class="text-center">Validation of contracts</h4>
 
-            <div class="rounded text-center" style="background-color: #eee;border: 1px solid #ddd;border-radius: 8px;">
-
-                <div class="form-group text-center" style="width:99%">
-                  <label class="col-sm-12 control-label" style="text-align: left">
-                    <span class="glyphicon glyphicon-arrow-down pull-left"></span>contract_partDomain</label>
-                  <div class="col-sm-12">
-                    <textarea rows="13" cols="100" class="form-control" onscroll="this" readonly style="background: white;text-align: left;resize:none">
+            <div
+              class="rounded text-center"
+              style="background-color: #eee;border: 1px solid #ddd;border-radius: 8px;"
+            >
+              <div class="form-group text-center" style="width:99%">
+                <label class="col-sm-12 control-label" style="text-align: left">
+                  <span class="glyphicon glyphicon-arrow-down pull-left"></span
+                  >contract_partDomain</label
+                >
+                <div class="col-sm-12">
+                  <textarea
+                    rows="13"
+                    cols="100"
+                    class="form-control"
+                    onscroll="this"
+                    readonly
+                    style="background: white;text-align: left;resize:none"
+                  >
                       OVH CONDITIONS PARTICULIERES D'ENREGISTREMENT,DE RENOUVELLEMENT ET DE TRANSFERT DE NOMS DE DOMAINE Mis à jour en date du
                       21 Juin 2010 Définitions: Unité d'Enregistrement (Registrar):Entité agréée par l'ICANN, constituant un intermédiaire
                       technique au travers duquel les demandes d'enregistrement de Noms de Domaine peuvent être soumises au Registre,
@@ -773,487 +723,99 @@
                       et de gestion des Noms... http://www.icann.org : Organisme tiers au présent contrat, définissant notamment les
                       règles d'attribution et de gestion des Noms... http://www.icann.org : Organisme tiers au présent contrat, définissant
                       notamment les règles d'attribution et de gestion des Noms...
-                    </textarea>
-                  </div>
-                  <a href="contracts/contract_partDomain.pdf" style="float: left" target="_blank">&nbsp;&nbsp;
-                    <img src="../../assets/export-pdf.png" style="width:18px;height:18px;">Ouvrir le contrat "contrat_partDomain" au format PDF</a>
+                    </textarea
+                  >
                 </div>
+                <a
+                  href="contracts/contract_partDomain.pdf"
+                  style="float: left"
+                  target="_blank"
+                  >&nbsp;&nbsp;
+                  <img
+                    src="../../assets/export-pdf.png"
+                    style="width:18px;height:18px;"
+                  />Ouvrir le contrat "contrat_partDomain" au format PDF</a
+                >
+              </div>
 
-                <div class="form-group" style="width:99%">
-                  <label class="col-sm-12 control-label" style="text-align: left">
-                    <span class="glyphicon glyphicon-arrow-down pull-left"></span>Conditions générales de service</label>
-                  <div class="col-sm-12">
-                    <textarea rows="13" cols="100" class="form-control" onscroll="this" readonly style="background: white;text-align: left;resize:none">
+              <div class="form-group" style="width:99%">
+                <label class="col-sm-12 control-label" style="text-align: left">
+                  <span class="glyphicon glyphicon-arrow-down pull-left"></span
+                  >Conditions générales de service</label
+                >
+                <div class="col-sm-12">
+                  <textarea
+                    rows="13"
+                    cols="100"
+                    class="form-control"
+                    onscroll="this"
+                    readonly
+                    style="background: white;text-align: left;resize:none"
+                  >
                       CONDITIONS GENERALES DE SERVICE Dernière version en date du 17/11/2017 Les présentes sont conclues entre : La société OVH,
                       SARL, société au capital de 10000 DT MF : 1111538F/A/M/000 RC : B24122392009 Rue 8300, Résidence TALAL, Appartement
                       B 3-2, Montplaisir CP 1082, Tunis, représentée par M.KLABA, ci-dessous nommée OVH, et entre toute personne physique
                       ou morale, particulier ou professionnel, de droit privé ou de droit public souhaitant s'engager dans une ou plusieurs
                       des prestations fournies par la société OVH, ci-après nommée le Client. DEFINITIONS : DEFINITIONS : DEFINITIONS
                       : DEFINITIONS : DEFINITIONS : DEFINITIONS : DEFINITIONS : DEFINITIONS : DEFINITIONS : DEFINITIONS :
-                    </textarea>
-                  </div>
-                  <a href="contracts/Conditions_générales_de_service.pdf" style="float: left" target="_blank">&nbsp;&nbsp;
-                    <img src="../../assets/export-pdf.png" style="width:18px;height:18px;">Ouvrir le contrat "Condition générales de service" au format PDF</a>
+                    </textarea
+                  >
                 </div>
-
+                <a
+                  href="contracts/Conditions_générales_de_service.pdf"
+                  style="float: left"
+                  target="_blank"
+                  >&nbsp;&nbsp;
+                  <img
+                    src="../../assets/export-pdf.png"
+                    style="width:18px;height:18px;"
+                  />Ouvrir le contrat "Condition générales de service" au format
+                  PDF</a
+                >
+              </div>
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <h5>Acceptance of contracts</h5>
 
-            <br/>
+            <br />
 
             <div class="checkbox" style="float: left">
               <label>
-                <input type="checkbox" id="field_terms" required name="terms"  >I have read the contracts and I accept them </label>
+                <input
+                  type="checkbox"
+                  id="field_terms"
+                  required
+                  name="terms"
+                  [formControl]="acceptTerms"
+                />I have read the contracts and I accept them
+              </label>
             </div>
             <!--<p><input type="submit"></p>-->
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
             <hr style="border-bottom:1px dotted lightgray" />
-            <br/>
+            <br />
             <div class="mt-5" style="float: right;">
+              <button mat-stroked-button color="primary" matStepperPrevious>
+                Previous
+              </button>
 
-              <button  mat-stroked-button color="primary"  matStepperPrevious>Previous</button>
-
-              <button  mat-flat-button color="primary" class="mx-2" matStepperNext>Next</button>
-
+              <button
+                mat-flat-button
+                color="primary"
+                class="mx-2"
+                (click)="submitAll()"
+                [disabled]="acceptTerms.invalid"
+              >
+                Finish
+              </button>
             </div>
-
-                                      </mat-step>
-
-
-                                      <mat-step>
-
-                                          <div id="divToPrint">
-                                              <h1 style="color:black;" class="fs-title">
-                                                <b>Payment</b>
-                                              </h1>
-                                              <br/>
-                                              <br/>
-                                              <div style="padding-left: 40px;padding-right: 40px">
-                                                <div class="row">
-                                                  <div class="col-sm-4">
-                                                    <!--<img class="pull-left" src="images/apple-touch-icon-114x114.png">-->
-                                                    <!--<img class="pull-left" src="images/1/logoRMS.png" width="45%" height="45%">-->
-                                                    <img class="pull-left" src="../../assets/rms logo.png" height="60">
-                                                  </div>
-                                                </div>
-                                                <div class="row">
-                                                  <div class="col-sm-4">
-                                                    <ul class="list-unstyled">
-                                                      <li class="pull-left">
-                                                        <span style="color: #1e6db9">Purchase order :</span>
-                                                      </li>
-                                                      <br/>
-                                                      <li class="pull-left">Phone Number&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;92524732</li>
-                                                      <br/>
-                                                      <li class="pull-left">Date&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;11-07-2018 12:34:42</li>
-                                                      <br/>
-                                                      <li class="pull-left">Expiration&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;25-07-2018 23:29:59</li>
-                                                      <br/>
-                                                    </ul>
-
-                                                    <div class="prism zeroclip pull-left">
-                                                      <ul class="pager">
-                                                        <li>
-                                                          <a href="#" onclick="PrintDiv()">Printable Version</a>
-                                                        </li>
-                                                      </ul>
-                                                    </div>
-
-                                                  </div>
-                                                  <div class="col-sm-4">
-                                                  </div>
-                                                  <div class="col-sm-4">
-                                                    <ul class="list-unstyled">
-                                                      <li class="pull-right">
-                                                        <span style="color: #1e6db9">Billing Contact :</span>
-                                                      </li>
-                                                      <br/>
-                                                      <li class="pull-right">Ramy Hamza</li>
-                                                      <br/>
-                                                      <li class="pull-right">37 rue de l'humilité</li>
-                                                      <br/>
-                                                      <li class="pull-right">2083 Ariana</li>
-                                                      <br/>
-                                                      <li class="pull-right">TN</li>
-                                                      <br/>
-                                                    </ul>
-                                                  </div>
-                                                </div>
-                                                <br/>
-                                                <div class="row">
-                                                  <!--<label class="pull-left" style="color: #1e6db9;margin-left: 1.4%">Users Section</label>-->
-                                                  <label class="pull-left" style="color: #1e6db9;margin-left: 2%;margin-bottom: 1%">Users Section</label>
-                                                </div>
-                                                <div class="table-responsive">
-                                                  <table style="color:#64a431;" class="table" border="1" BORDERCOLOR=lightgrey rules="all">
-                                                    <thead>
-                                                      <tr>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="29%">OFFERS</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="20%">Domain</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="17%">Quantity</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="17%">Unit price</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align:center" WIDTH="17%">Price HT</th>
-                                                      </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                      <tr>
-                                                        <td>.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td style="color:#64a431;" scope="row">.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td style="color:#64a431;" scope="row">.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td style="color:#64a431;" scope="row">.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td style="color:black;text-align: right; " ROWSPAN=2 COLSPAN=4 WIDTH="83%">Sub total</td>
-                                                        <td style="color:black;text-align: center;" ROWSPAN=2 COLSPAN=4 WIDTH="17%" scope="row">-2.270 DT</td>
-                                                      </tr>
-                                                    </tbody>
-                                                  </table>
-                                                </div>
-                                                <br/>
-                                                <div class="row">
-                                                  <label class="pull-left" style="color: #1e6db9;margin-left: 2%">Database Section</label>
-                                                </div>
-                                                <!--<label style="color: #1e6db9">Database Section</label>-->
-                                                <div class="table-responsive">
-                                                  <table class="table" border="1" BORDERCOLOR=lightgrey rules="all">
-                                                    <thead>
-                                                      <tr>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="29%">CREATION</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="20%">Domain</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="17%">Quantity</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="17%">Unit price</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align:center" WIDTH="17%">Price HT</th>
-                                                      </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                      <tr>
-                                                        <td style="text-align: left">Request to create a .com - 1 year</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>20.000 DT</td>
-                                                        <td>20.000 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td style="color:black;text-align: right; " ROWSPAN=2 COLSPAN=4 WIDTH="83%">Sub total</td>
-                                                        <td style="color:black;text-align: center;" ROWSPAN=2 COLSPAN=4 WIDTH="17%" scope="row">-2.270 DT</td>
-                                                      </tr>
-                                                    </tbody>
-                                                  </table>
-                                                </div>
-                                                <br/>
-                                                <div class="row">
-                                                  <label class="pull-left" style="color: #1e6db9;margin-left: 2%">SLA Section</label>
-                                                </div>
-                                                <!--<label style="color: #1e6db9">SLA Section</label>-->
-                                                <div class="table-responsive">
-                                                  <table class="table" border="1" BORDERCOLOR=lightgrey rules="all">
-                                                    <thead>
-                                                      <tr>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="29%">CREATION</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="20%">Domain</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="17%">Quantity</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="17%">Unit price</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align:center" WIDTH="17%">Price HT</th>
-                                                      </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                      <tr>
-                                                        <td style="text-align: left">Request to create a .com - 1 year</td>
-                                                          <td>dbhegt.com</td>
-                                                          <td>1</td>
-                                                          <td>20.000 DT</td>
-                                                          <td>20.000 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td style="color:black;text-align: right; " ROWSPAN=2 COLSPAN=4 WIDTH="83%">Sub total</td>
-                                                        <td style="color:black;text-align: center;" ROWSPAN=2 COLSPAN=4 WIDTH="17%" scope="row">-2.270 DT</td>
-                                                      </tr>
-                                                    </tbody>
-                                                  </table>
-                                                </div>
-                                                <br/>
-                                                <div class="row">
-                                                  <label class="pull-left" style="color: #1e6db9;margin-left: 2%">Support Section</label>
-                                                </div>
-                                                <!--<label style="color: #1e6db9">Support Section</label>-->
-                                                <div class="table-responsive">
-                                                  <table class="table" border="1" BORDERCOLOR=lightgrey rules="all">
-                                                    <thead>
-                                                      <tr>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="29%">CREATION</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="20%">Domain</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="17%">Quantity</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align: center" WIDTH="17%">Unit price</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align:center" WIDTH="17%">Price HT</th>
-                                                      </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                      <tr>
-                                                        <td style="text-align: left">Request to create a .com - 1 year</td>
-                                                          <td>dbhegt.com</td>
-                                                          <td>1</td>
-                                                          <td>20.000 DT</td>
-                                                          <td>20.000 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td style="color:black;text-align: right; " ROWSPAN=2 COLSPAN=4 WIDTH="83%">Sub total</td>
-                                                        <td style="color:black;text-align: center;" ROWSPAN=2 COLSPAN=4 WIDTH="17%" scope="row">-2.270 DT</td>
-                                                      </tr>
-                                                    </tbody>
-                                                  </table>
-                                                </div>
-                                                <br/>
-                                                <div class="row">
-                                                  <label class="pull-left" style="color: #1e6db9;margin-left: 2%">Others Section</label>
-                                                </div>
-                                                <!--<label style="color: #1e6db9">Others Section</label>-->
-                                                <div class="table-responsive">
-                                                  <table style="color:#64a431;" class="table" border="1" BORDERCOLOR=lightgrey rules="all">
-                                                    <thead>
-                                                      <tr>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align:center" WIDTH="29%">OFFERS</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align:center" WIDTH="20%">Domain</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align:center" WIDTH="17%">Quantity</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align:center" WIDTH="17%">Unit price</th>
-                                                        <th style="background:#cfdaeb;color:#1f68bd;text-align:center" WIDTH="17%">Price HT</th>
-                                                      </tr>
-                                                    </thead>
-
-                                                    <tbody>
-                                                      <tr>
-                                                        <td>.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td>.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td>.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td>.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td>.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <th>.Com Create Bar Price</th>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td>.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td>.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td>.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td>.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td>.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td>.Com Create Bar Price</td>
-                                                        <td>dbhegt.com</td>
-                                                        <td>1</td>
-                                                        <td>-2.270 DT</td>
-                                                        <td>-2.270 DT</td>
-                                                      </tr>
-                                                      <tr>
-                                                        <td style="color:black;text-align: right; " ROWSPAN=2 COLSPAN=4 WIDTH="83%">Sub total</td>
-                                                        <td style="color:black;text-align: center;" ROWSPAN=2 COLSPAN=4 WIDTH="17%" scope="row">-2.270 DT</td>
-                                                      </tr>
-                                                    </tbody>
-                                                  </table>
-                                                </div>
-                                                <br/>
-                                                <div class="row">
-                                                  <div class="col-md-6">
-                                                  </div>
-                                                  <div class="col-md-6 col-md-offset-6">
-                                                    <table class="table" border="1" BORDERCOLOR=lightgrey rules="all">
-                                                      <tbody>
-                                                        <tr>
-                                                          <td style="text-align: left">
-                                                            <strong>CREATION</strong>
-                                                          </td>
-                                                          <td style="text-align: center">20,000 DT</td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td style="text-align: left">
-                                                            <strong>CREATION</strong>
-                                                          </td>
-                                                          <td style="text-align: center">20,000 DT</td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td style="text-align: left">
-                                                            <strong>CREATION</strong>
-                                                          </td>
-                                                          <td style="text-align: center">20,000 DT</td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td style="text-align: left">
-                                                            <strong>CREATION</strong>
-                                                          </td>
-                                                          <td style="text-align: center">20,000 DT</td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td style="text-align: left;color:#64a431;">
-                                                            <strong>OFFERS</strong>
-                                                          </td>
-                                                          <td style="text-align: center;color:#64a431;">-2.270 DT</td>
-                                                        </tr>
-                                                      </tbody>
-                                                    </table>
-                                                    <table class="table" border="1" BORDERCOLOR=lightgrey rules="all">
-                                                      <thead>
-                                                        <tr>
-                                                          <th style="background:#cfdaeb;color:#1f68bd;text-align:center" ROWSPAN=2 COLSPAN=4>Tax Summary</th>
-                                                        </tr>
-                                                      </thead>
-                                                      <tbody>
-                                                        <tr>
-                                                          <td WIDTH="45%">
-                                                            <strong>Types Of Taxes</strong>
-                                                          </td>
-                                                          <td WIDTH="17%">
-                                                            <strong>Amount</strong>
-                                                          </td>
-                                                          <td WIDTH="10%">
-                                                            <strong>Rate</strong>
-                                                          </td>
-                                                          <td WIDTH="28%">
-                                                            <strong>Amount Taxes</strong>
-                                                          </td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td WIDTH="45%">Standard Tunisia VAT Rate</td>
-                                                          <td WIDTH="17%">47.760 DT</td>
-                                                          <td WIDTH="10%">19%</td>
-                                                          <td WIDTH="28%">9.070 DT</td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td style="color:black;text-align: center; " ROWSPAN=2 COLSPAN=3 WIDTH="83%">Fiscal Stamp</td>
-                                                          <td style="color:black;text-align: center;" ROWSPAN=2 COLSPAN=1 WIDTH="17%" scope="row">0.600 DT</td>
-                                                        </tr>
-                                                      </tbody>
-                                                    </table>
-                                                    <table class="table" border="1" BORDERCOLOR=lightgrey rules="all">
-
-                                                        <tr>
-                                                          <td style="text-align: left;">
-                                                            <strong>PRICE HT</strong>
-                                                          </td>
-                                                          <td style="text-align: center;">
-                                                            <strong>47.760 DT</strong>
-                                                          </td>
-                                                        </tr>
-                                                        <tr>
-                                                          <td style="text-align: left;background:#cfdaeb;color:#1f68bd;">
-                                                            <strong>TOTAL TTC</strong>
-                                                          </td>
-                                                          <td style="text-align: center;background:#cfdaeb;color:#1f68bd;">
-                                                            <strong>57.430 DT</strong>
-                                                          </td>
-                                                        </tr>
-
-                                                    </table>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <hr style="border-bottom:1px dotted lightgray" />
-
-
-                                            <div class="mt-5" style="float: right;">
-
-
-                                              <button  mat-stroked-button color="primary"  matStepperPrevious>Previous</button>
-
-                                              <button  mat-flat-button color="primary" class="mx-2" matStepperNext>Next</button>
-
-
-                                            </div>
-                                      </mat-step>
-            </mat-horizontal-stepper>
-
-
+          </mat-step>
+          
+        </mat-horizontal-stepper>
       </div>
-
-
-      </div>
-
+    </div>
   </div>
 </div>
-

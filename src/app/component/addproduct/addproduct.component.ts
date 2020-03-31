@@ -12,11 +12,11 @@ export class AddproductComponent implements OnInit {
 
   public productForm:FormGroup=new FormGroup({
     nom:new FormControl('',Validators.required),
-    logo:new FormControl('something.png'),
+    logo:new FormControl('',Validators.required),
     type:new FormControl('',Validators.required),
     prix:new FormControl('',Validators.required),
     description:new FormControl('',Validators.required),
-    project:new FormControl('1')
+    project:new FormControl('',Validators.required)
     
     
     

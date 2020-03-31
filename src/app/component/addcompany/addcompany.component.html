@@ -54,153 +54,168 @@
               <div class="card p-6">
                   <form [formGroup]="productForm" (ngSubmit)="submit()">
                       <div class="form-group">
+                        <label>Photo</label>
                           <input
                               type="text"
                               class="form-control"
-                              aria-describedby="product photo"
+                              id="photo"
+                              value=""
                               formControlName="file"
                           />
-                          <label>Photo</label>
+                          
                       </div>
 
                       <div class="row">
                           <div class="form-group col-6">
+                            <label>Company Name</label>
                               <input
                                   type="text"
                                   class="form-control"
                                   aria-describedby="product name"
                                   formControlName="name"
                               />
-                              <label>Company Name</label>
+                              
                           </div>
 
                           <div class="form-group col-6">
+                            <label>Email</label>
                               <input
                                   type="text"
                                   class="form-control"
                                   aria-describedby="product name"
                                   formControlName="email"
                               />
-                              <label>Email</label>
+                              
                           </div>
                       </div>
 
                       <div class="row mt-2">
                           <div class="form-group col-6">
+                            <label>Company Adress</label>
                               <input
                                   type="text"
                                   class="form-control"
                                   aria-describedby="product name"
                                   formControlName="adresse"
                               />
-                              <label>Company Adress</label>
+                              
                           </div>
 
                           <div class="form-group col-6">
+                            <label>Phone number</label>
                               <input
                                   type="text"
                                   class="form-control"
                                   aria-describedby="product name"
                                   formControlName="numtel"
                               />
-                              <label>Phone number</label>
+                              
                           </div>
                       </div>
 
                       <div class="row mt-2">
                           <div class="form-group col-6">
+                            <label>Url Website</label>
                               <input
                                   type="text"
                                   class="form-control"
                                   aria-describedby="product name"
                                   formControlName="website"
                               />
-                              <label>Url Website</label>
+                              
                           </div>
 
                           <div class="form-group col-6">
+                            <label>Staff count number</label>
                               <input
                                   type="text"
                                   class="form-control"
                                   aria-describedby="product name"
                                   formControlName="staffcount"
                               />
-                              <label>Staff count number</label>
+                              
                           </div>
                       </div>
 
                       <div class="row mt-2">
                           <div class="form-group col-6">
+                            <label>Subscription period</label>
                               <input
                                   type="text"
                                   class="form-control"
                                   aria-describedby="product name"
                                   formControlName="period_subscription"
                               />
-                              <label>Subscription period</label>
+                              
                           </div>
 
                           <div class="form-group col-6">
+                            <label>Database Size</label>
                               <input
                                   type="text"
                                   class="form-control"
                                   aria-describedby="product name"
                                   formControlName="databasesize"
                               />
-                              <label>Database Size</label>
+                              
                           </div>
                       </div>
 
                       <div class="row mt-2">
                           <div class="form-group col-6">
+                            <label>SLA Type</label>
                               <input
                                   type="text"
                                   class="form-control"
                                   aria-describedby="product name"
                                   formControlName="slatype"
                               />
-                              <label>SLA Type</label>
+                              
                           </div>
 
                           <div class="form-group col-6">
+                            <label>Support Type</label>
                               <input
                                   type="text"
                                   class="form-control"
                                   aria-describedby="product name"
                                   formControlName="supporttype"
                               />
-                              <label>Support Type</label>
+                              
                           </div>
                       </div>
 
                       <div class="form-group">
+                        <label>Business sector</label>
                           <input
                               type="text"
                               class="form-control"
                               aria-describedby="product categories"
                               formControlName="sector"
                           />
-                          <label>Business sector</label>
+                          
                       </div>
 
                       <div class="form-group">
+                        <label>Activitie territories</label>
                           <input
                               type="text"
                               class="form-control"
                               aria-describedby="product price"
                               formControlName="activity"
                           />
-                          <label>Activitie territories</label>
+                          
                       </div>
 
                       <div class="form-group">
+                        <label> Company Description</label>
                           <textarea
                               class="form-control"
                               aria-describedby="product description"
                               rows="5"
                               formControlName="description"
                           ></textarea>
-                          <label> Company Description</label>
+                          
                       </div>
 
                       <div class="form-group">
@@ -212,6 +227,7 @@
                           />
                       </div>
                   </form>
+                  
               </div>
           </div>
       </div>

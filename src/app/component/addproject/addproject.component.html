@@ -44,8 +44,9 @@
                   <form [formGroup]="projectForm" (ngSubmit)="submit()">
 
                       <div class="form-group">
+                        <label>Project Name</label>
                           <input type="text" class="form-control" aria-describedby="project name" formControlName="titre"/>
-                          <label>Project Name</label>
+                          
                       </div>
 
 
@@ -56,23 +57,27 @@
 
 
                       <div class="form-group mt-2">
+                        <label>Creator</label>
                           <input type="text" class="form-control" aria-describedby="product name" formControlName="project_creator"/>
-                          <label>Creator</label>
+                          
                       </div>
 
                       <div class="form-group">
-                        <input type="text" class="form-control" aria-describedby="Activity Territories" formControlName="territories"/>
                         <label>Activity Territories</label>
+                        <input type="text" class="form-control" aria-describedby="Activity Territories" formControlName="territories"/>
+                        
                     </div>
 
                       <div class="form-group">
-                        <input type="text" class="form-control" aria-describedby="product photo" formControlName="logo"/>
                         <label>Photo</label>
+                        <input type="text" class="form-control" aria-describedby="product photo" formControlName="logo"/>
+                        
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control" aria-describedby="product status" formControlName="status"/>
                         <label>Status</label>
+                        <input type="text" class="form-control" aria-describedby="product status" formControlName="status"/>
+                        
                     </div>
 
                       <div class="form-group">
