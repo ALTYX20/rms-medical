@@ -28,7 +28,7 @@ export class ModifyReferenceComponent implements OnInit {
   submit(){
     this.dataService.modifyReference(this.referenceForm.value).subscribe(res=>{
       console.log(res);
-      this.router.navigate(['listReference'])
+      this.router.navigate(['list-Reference'])
     },err=>{
       console.log(err);
     })

@@ -28,7 +28,7 @@ export class ModifyPresentationComponent implements OnInit {
   submit(){
     this.dataService.modifyPresentation(this.presentationForm.value).subscribe(res=>{
       console.log(res);
-      this.router.navigate(['listpresentation'])
+      this.router.navigate(['list-presentation'])
     },err=>{
       console.log(err);
     })
