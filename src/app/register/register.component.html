@@ -1,8 +1,8 @@
 <div class="content-wrapper page">
   <div class="content custom-scrollbar">
     <div id="login" class="">
-      <div class="auth overflow custom-scrollbar">
-        <mat-horizontal-stepper linear="false" class="container mt-5" #stepper>
+      <div class="auth sector">
+        <mat-horizontal-stepper linear="false" class="container overflow custom-scrollbar" #stepper>
           <mat-step>
             <div id="logo" class="row text-center">
               <div>
@@ -37,9 +37,15 @@
                     I'm already an RMS customer
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title"></h5>
-
-                    <form [formGroup]="loginForm" (ngSubmit)="login(stepper)">
+                    <div *ngIf="errorMsg" class="alert alert-danger" role="alert">
+                      {{errorMsg}}
+                      <button type="button" class="close" (click)="dismissAlert()">
+                        <span class="material-icons">
+                          close
+                          </span>
+                      </button>
+                    </div>
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
                       <div class="m-3">
                         <input
                           class="form-control"
@@ -68,7 +74,11 @@
                         type="submit"
                         class="btn btn-primary m-3 "
                         value="Log in"
+                        
                       />
+                      <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
                     </form>
                   </div>
                 </div>
@@ -176,43 +186,138 @@
                   type="text"
                   class="form-control"
                   id="name"
+                  [class.is-invalid]="getControlValue('name').invalid && getControlValue('name').touched"
                   formControlName="name"
                   required
                 />
+                <div class="invalid-feedback">
+                  should be at least 5 characters.
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input
-                id="email"
-                  type="email"
-                  class="form-control"
-                  formControlName="email"
-                  required
-                />
-              </div>
+              
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input
+                  id="email"
+                    type="email"
+                    class="form-control"
+                    formControlName="email"
+                    [class.is-invalid]="getControlValue('email').invalid && getControlValue('email').touched"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+
+
+                <div class="form-row">
+                  <div class="col">
+                    <div class="form-group mr-2">
+                      <label for="motpass">Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="motpass"
+                        formControlName="motpass"
+                        [class.is-invalid]="getControlValue('motpass').invalid && getControlValue('motpass').touched"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        should be at least 6 characters.
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="confpass">Confirm Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="confpass"
+                        formControlName="confpass"
+                        [class.is-invalid]="personalInfo.errors?.passwordsNotMatch && getControlValue('name').touched"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Passwords need to match.
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+
+  
+                <div class="form-group">
+                  <label for="activity">Activity</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="activity"
+                    formControlName="activity"
+                    [class.is-invalid]="getControlValue('activity').invalid && getControlValue('activity').touched"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    this field is required.
+                  </div>
+                </div>
+                
+              
 
               <div class="form-group">
-                <label for="activity">Activity</label>
+                <label for="adresse">Address</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="activity"
-                  formControlName="activity"
+                  id="adresse"
+                  formControlName="adresse"
+                  [class.is-invalid]="getControlValue('adresse').invalid && getControlValue('adresse').touched"
                   required
                 />
+                <div class="invalid-feedback">
+                  this field is required.
+                </div>
               </div>
 
-              <div class="form-group">
-                <label for="address">Address</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="address"
-                  formControlName="address"
-                  required
-                />
+              <div class="form-row">
+                <div class="col">
+                  <div class="form-group mr-2">
+                    <label for="city">City</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="city"
+                      formControlName="city"
+                      [class.is-invalid]="getControlValue('city').invalid && getControlValue('city').touched"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      this field is required.
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="codepostal">Postal Code</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="codepostal"
+                      formControlName="codepostal"
+                      [class.is-invalid]="getControlValue('codepostal').invalid && getControlValue('codepostal').touched"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      this field is required.
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              
 
               <div class="form-group">
                 <label for="numtel">Telephone number</label>
@@ -221,8 +326,12 @@
                   class="form-control"
                   id="numtel"
                   formControlName="numtel"
+                  [class.is-invalid]="getControlValue('numtel').invalid && getControlValue('numtel').touched"
                   required
                 />
+                <div class="invalid-feedback">
+                  this field is required.
+                </div>
               </div>
 
               <div class="form-group">
@@ -232,6 +341,7 @@
                   class="form-control"
                   id="website"
                   formControlName="website"
+                  [class.is-invalid]="getControlValue('website').invalid && getControlValue('website').touched"
                 />
               </div>
 
@@ -242,8 +352,27 @@
                   class="form-control"
                   id="sector"
                   formControlName="sector"
+                  [class.is-invalid]="getControlValue('sector').invalid && getControlValue('sector').touched"
                   required
                 />
+                <div class="invalid-feedback">
+                  this field is required.
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="file">Logo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="file"
+                  formControlName="file"
+                  [class.is-invalid]="getControlValue('file').invalid && getControlValue('file').touched"
+                  required
+                />
+                <div class="invalid-feedback">
+                  this field is required.
+                </div>
               </div>
 
               <div class="form-group">
@@ -253,8 +382,12 @@
                   class="form-control"
                   id="description"
                   formControlName="description"
+                  [class.is-invalid]="getControlValue('description').invalid && getControlValue('description').touched"
                   required
                 ></textarea>
+                <div class="invalid-feedback">
+                  this field is required.
+                </div>
               </div>
 
               
@@ -268,11 +401,12 @@
                 mat-flat-button
                 color="primary"
                 class="mx-2"
-                matStepperNext
-                [disabled]="personalInfo.invalid"
+                (click)="submitPersonalInfo(stepper)"
+                [disabled]="!personalInfo.valid"  
               >
                 Next
               </button>
+              
             </div>
           </mat-step>
 
@@ -337,50 +471,72 @@
             <h1 class="text-center mt-5 text-bold text-black">
               Users
             </h1>
-            <p *ngIf="quotaExceeded" style="color: red;">Number of users has exceeded the quota</p>
+            <div *ngIf="quotaExceeded" class="alert alert-danger" role="alert">
+              Number of users has exceeded the quota.
+            </div>
+            <div *ngIf="wrongInput" class="alert alert-danger" role="alert">
+              Enter a valid email.
+              <button type="button" class="close" (click)="dismissAlert()">
+                <span class="material-icons">
+                  close
+                  </span>
+              </button>
+            </div>
             <form [formGroup]="addUserForm" class="form-inline" (ngSubmit)="addUser()">
               <label class="sr-only" for="inlineFormInputName1">Name</label>
-              <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName1" placeholder="Name" formControlName="name" required>
+              <input type="text" class="form-control mb-5 mr-sm-5" id="inlineFormInputName1" placeholder="Name" formControlName="name" required>
             
               <label class="sr-only" for="inlineFormInputName2">Name</label>
-              <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Email" formControlName="email" required>
+              <input type="text" class="form-control mb-5 mr-sm-5" id="inlineFormInputName2" placeholder="Email" formControlName="email" required>
 
               <label class="sr-only" for="inlineFormInputName3">Name</label>
-              <select class="form-control mb-2 mr-sm-2" id="inlineFormInputName3" formControlName="role" required>
+              <select class="form-control mb-5 mr-sm-5" id="inlineFormInputName3" formControlName="role" required>
                 <option selected>Type</option>
-                <option value="admin">Admin</option>
-                <option value="manager">Manager</option>
-                <option value="editor">Editor</option>
-                <option value="viewer">Viewer</option>
+                <option value="admins">Admin</option>
+                <option value="managers">Manager</option>
+                <option value="editors">Editor</option>
+                <option value="viewers">Viewer</option>
               </select>
             
-              <button type="submit" class="btn btn-primary mb-2" [disabled]="addUserForm.invalid">ADD</button>
+              <button type="submit" class="btn btn-primary mb-5">ADD</button>
             </form>
             <mat-list>
               <div mat-subheader>Admins</div>
-              <mat-list-item *ngFor="let a of admin">
+              <mat-list-item *ngFor="let u of admins">
                 <mat-icon mat-list-icon>account_box</mat-icon>
-                <div mat-line>{{a.name}}</div>
-                <div mat-line> {{a.email}} </div>
+                <div mat-line>{{u.name}}</div>
+                <div mat-line> {{u.email}} </div>
+                <button mat-icon-button color="warn" (click)="removeUser(u)" [disabled]="admins.indexOf(u)===0">
+                  <mat-icon>delete</mat-icon>
+                </button>
               </mat-list-item>
               <mat-divider></mat-divider>
               <div mat-subheader>Managers</div>
-              <mat-list-item *ngFor="let m of manager">
+              <mat-list-item *ngFor="let u of managers">
                 <mat-icon mat-list-icon>account_box</mat-icon>
-                <div mat-line>{{m.name}}</div>
-                <div mat-line> {{m.email}} </div>
+                <div mat-line>{{u.name}}</div>
+                <div mat-line> {{u.email}} </div>
+                <button mat-icon-button color="warn" (click)="removeUser(u)">
+                  <mat-icon>delete</mat-icon>
+                </button>
               </mat-list-item>
               <div mat-subheader>Editors</div>
-              <mat-list-item *ngFor="let e of editor">
+              <mat-list-item *ngFor="let u of editors">
                 <mat-icon mat-list-icon>account_box</mat-icon>
-                <div mat-line>{{e.name}}</div>
-                <div mat-line> {{e.email}} </div>
+                <div mat-line>{{u.name}}</div>
+                <div mat-line> {{u.email}} </div>
+                <button mat-icon-button color="warn" (click)="removeUser(u)">
+                  <mat-icon>delete</mat-icon>
+                </button>
               </mat-list-item>
               <div mat-subheader>Viewers</div>
-              <mat-list-item *ngFor="let v of viewer">
+              <mat-list-item *ngFor="let u of viewers">
                 <mat-icon mat-list-icon>account_box</mat-icon>
-                <div mat-line>{{v.name}}</div>
-                <div mat-line> {{v.email}} </div>
+                <div mat-line>{{u.name}}</div>
+                <div mat-line> {{u.email}} </div>
+                <button mat-icon-button color="warn" (click)="removeUser(u)">
+                  <mat-icon>delete</mat-icon>
+                </button>
               </mat-list-item>
             </mat-list>
             <div class="mt-5" style="float: right;margin-top: 80px;">

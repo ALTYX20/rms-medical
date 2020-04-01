@@ -12,6 +12,8 @@ export class ModifyproductComponent implements OnInit {
 
   public productForm:FormGroup;
   item:any;
+  public errorMsg: any;
+  public isLoading:boolean = false;
 
   constructor(private dataService:DataService,private router:Router) {
     this.item = this.router.getCurrentNavigation().extras.state;
@@ -27,12 +29,24 @@ export class ModifyproductComponent implements OnInit {
   }
 
   submit(){
+    this.isLoading = true;
     this.dataService.modifyProd(this.productForm.value).subscribe(res=>{
       console.log(res);
+      if(res === "this product already exist"){
+        this.errorMsg = res;
+        this.isLoading = false;
+        return;
+      }
       this.router.navigate(['listproduct'])
     },err=>{
-      console.log(err);
+      console.log(err.statusText);
+      this.errorMsg = err.statusText;
+      this.isLoading = false;
     })
+  }
+
+  getControlValue(name){
+    return this.productForm.get(name);
   }
 
   ngOnInit(): void {

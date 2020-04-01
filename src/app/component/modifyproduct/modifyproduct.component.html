@@ -42,44 +42,128 @@
                 <div class="card p-6">
   
                     <form [formGroup]="productForm" (ngSubmit)="submit()">
-  
                         <div class="form-group">
-                            <input type="text" class="form-control" aria-describedby="product name" formControlName="nom"/>
-                            <label>Product Name</label>
+                          <label>Product Name</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            [class.is-invalid]="
+                              getControlValue('nom').invalid &&
+                              getControlValue('nom').touched
+                            "
+                            aria-describedby="product name"
+                            formControlName="nom"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            this field is required.
+                          </div>
                         </div>
-  
+            
                         <div class="form-group">
-                            <textarea class="form-control" aria-describedby="product description" rows="5" formControlName="description"></textarea>
-                            <label>Product Description</label>
+                          <label>Product Description</label>
+                          <textarea
+                            class="form-control"
+                            [class.is-invalid]="
+                              getControlValue('description').invalid &&
+                              getControlValue('description').touched
+                            "
+                            aria-describedby="product description"
+                            rows="5"
+                            formControlName="description"
+                            required
+                          ></textarea>
+                          <div class="invalid-feedback">
+                            this field is required.
+                          </div>
                         </div>
-  
+            
                         <div class="form-group">
-                            <input type="text" class="form-control" aria-describedby="product categories" formControlName="type"/>
-                            <label>Categories</label>
+                          <label>Categories</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            [class.is-invalid]="
+                              getControlValue('type').invalid &&
+                              getControlValue('type').touched
+                            "
+                            aria-describedby="product categories"
+                            formControlName="type"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            this field is required.
+                          </div>
                         </div>
-  
+            
                         <div class="form-group">
-                            <input type="text" class="form-control" aria-describedby="product price" formControlName="prix"/>
-                            <label>Price</label>
+                          <label>Price</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            [class.is-invalid]="
+                              getControlValue('prix').invalid &&
+                              getControlValue('prix').touched
+                            "
+                            aria-describedby="product price"
+                            formControlName="prix"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            this field is required.
+                          </div>
                         </div>
-  
+            
                         <div class="form-group">
-                          <input type="text" class="form-control" aria-describedby="product project" formControlName="project"/>
                           <label>Project</label>
-                      </div>
-  
+                          <input
+                            type="text"
+                            class="form-control"
+                            [class.is-invalid]="
+                              getControlValue('project').invalid &&
+                              getControlValue('project').touched
+                            "
+                            aria-describedby="product project"
+                            formControlName="project"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            this field is required.
+                          </div>
+                        </div>
+            
                         <div class="form-group">
-                          <input type="file" class="form-control" aria-describedby="product photo" />
                           <label>Photo</label>
-                      </div>
-  
+                          <input
+                            type="text"
+                            class="form-control"
+                            [class.is-invalid]="
+                              getControlValue('logo').invalid &&
+                              getControlValue('logo').touched
+                            "
+                            aria-describedby="product photo"
+                            formControlName="logo"
+                          />
+                          <div class="invalid-feedback">
+                            this field is required.
+                          </div>
+                        </div>
+            
                         <div class="form-group">
-                          <input type="submit" class="form-control btn btn-dark" aria-describedby="product tags" value="Save Product"/>
-  
-                      </div>
-  
-  
-                    </form>
+                          <button
+                            mat-flat-button
+                            type="submit"
+                            color="primary"
+                            style="width: 100%;"
+                            [disabled]="productForm.invalid || isLoading"
+                          >
+                            <span *ngIf="!isLoading">Save Product</span>
+                            <div *ngIf="isLoading" class="spinner-border" role="status">
+                              <span class="sr-only">Loading...</span>
+                            </div>
+                          </button>
+                        </div>
+                      </form>
                 </div>
             </div>
   

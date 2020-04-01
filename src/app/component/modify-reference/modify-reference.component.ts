@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataserviceService } from 'src/app/services/dataservice.service';
+import { DataserviceService } from 'src/app/service/dataservice.service';
 import { Router } from '@angular/router';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 
@@ -28,7 +28,7 @@ export class ModifyReferenceComponent implements OnInit {
   submit(){
     this.dataService.modifyReference(this.referenceForm.value).subscribe(res=>{
       console.log(res);
-      this.router.navigate(['list-Reference'])
+      this.router.navigate(['listReference'])
     },err=>{
       console.log(err);
     })
