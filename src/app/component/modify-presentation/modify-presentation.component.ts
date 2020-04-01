@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataserviceService } from 'src/app/services/dataservice.service';
+import { DataserviceService } from 'src/app/service/dataservice.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -28,7 +28,7 @@ export class ModifyPresentationComponent implements OnInit {
   submit(){
     this.dataService.modifyPresentation(this.presentationForm.value).subscribe(res=>{
       console.log(res);
-      this.router.navigate(['list-presentation'])
+      this.router.navigate(['listpresentation'])
     },err=>{
       console.log(err);
     })

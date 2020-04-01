@@ -17,10 +17,9 @@ export class AddproductComponent implements OnInit {
     prix:new FormControl('',Validators.required),
     description:new FormControl('',Validators.required),
     project:new FormControl('',Validators.required)
-    
-    
-    
   })
+  public errorMsg: any;
+  public isLoading:boolean = false;
 
   constructor(private cd:ChangeDetectorRef,private dataService:DataService,private router:Router) { }
 
@@ -37,12 +36,24 @@ export class AddproductComponent implements OnInit {
 // }
 
   submit(){
+    this.isLoading = true;
     this.dataService.addProduct(this.productForm.value).subscribe(res=>{
       console.log(res);
+      if(res === "this product already exist"){
+        this.errorMsg = res;
+        this.isLoading = false;
+        return;
+      }
       this.router.navigate(['listproduct'])
     },err=>{
-      console.log(err);
+      console.log(err.statusText);
+      this.errorMsg = err.statusText;
+      this.isLoading = false;
     })
+  }
+
+  getControlValue(name){
+    return this.productForm.get(name);
   }
 
   ngOnInit(): void {

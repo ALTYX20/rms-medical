@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataserviceService } from 'src/app/service/dataservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import {DataserviceService} from 'src/app/services/dataservice.service';
-import { from } from 'rxjs';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-list-presentation',
@@ -13,12 +13,12 @@ export class ListPresentationComponent implements OnInit {
  
   presentations:any[];
 
-  constructor(private dataService:DataserviceService,private route: ActivatedRoute, private router: Router) { }
+  constructor(private dataService:DataserviceService,private route: ActivatedRoute, private router: Router,private formBuilder:FormBuilder) { }
 
 
 
     ngOnInit(): void {
-      this.dataService.getPresenatationDetails().subscribe(res=>{
+      this.dataService.getPResenatationDetails().subscribe(res=>{
         this.presentations = res;
       },err=>console.log(err));
     }
@@ -42,7 +42,7 @@ export class ListPresentationComponent implements OnInit {
       })
     }
   modifyPresentation(item){
-      this.router.navigateByUrl('/modify-presentation', { state: item });
+      this.router.navigateByUrl('/modifyPresentation', { state: item });
     }
 
 }
