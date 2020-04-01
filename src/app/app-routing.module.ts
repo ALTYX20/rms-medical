@@ -22,6 +22,9 @@ import { AddPresentationComponent } from './component/add-presentation/add-prese
 import { ModifyPresentationComponent } from './component/modify-presentation/modify-presentation.component';
 import { ModifyReferenceComponent } from './component/modify-reference/modify-reference.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddMediaComponent } from './component/add-media/add-media.component';
+import { ListMediaComponent } from './component/list-media/list-media.component';
+import { ModifyMediaComponent } from './component/modify-media/modify-media.component';
 
 
 const routes: Routes = [
@@ -45,7 +48,9 @@ const routes: Routes = [
     {path:'add-reference', component: AddReferenceComponent},
     {path: 'list-reference', component: ListReferenceComponent},
     {path:'modify-reference', component: ModifyReferenceComponent},
-
+    {path:'add-media', component: AddMediaComponent},
+    {path: 'list-media', component: ListMediaComponent},
+    {path:'modify-media', component: ModifyMediaComponent},
 
   ],canActivate:[AuthGuard]},
 
