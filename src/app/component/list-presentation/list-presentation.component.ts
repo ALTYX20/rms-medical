@@ -42,7 +42,7 @@ export class ListPresentationComponent implements OnInit {
       })
     }
   modifyPresentation(item){
-      this.router.navigateByUrl('/modify-Presentation', { state: item });
+      this.router.navigateByUrl('/modify-presentation', { state: item });
     }
 
 }
