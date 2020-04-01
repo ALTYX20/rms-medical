@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { DataserviceService } from 'src/app/services/dataservice.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-list-media',
@@ -12,8 +13,22 @@ export class ListMediaComponent implements OnInit {
   images:any[] = []
   videos:any[] = []
   pdf:any[] = []
-
-  constructor(private dataService:DataserviceService,private router:Router) {}
+  public ImageForm:FormGroup=new FormGroup({
+    type:new FormControl('',Validators.required),
+    description:new FormControl('',Validators.required),
+ 
+  })
+  public VideoForm:FormGroup=new FormGroup({
+    type:new FormControl('',Validators.required),
+    description:new FormControl('',Validators.required),
+ 
+  })
+  public pdfForm:FormGroup=new FormGroup({
+    type:new FormControl('',Validators.required),
+    description:new FormControl('',Validators.required),
+ 
+  })
+  constructor(private dataService:DataserviceService,private router:Router,cd:ChangeDetectorRef) {}
 
 
   ngOnInit(): void {
@@ -67,7 +82,8 @@ export class ListMediaComponent implements OnInit {
   }
   
   modifyMedia(item){
+    
     this.router.navigateByUrl('/modify-media', { state: item });
   }
-
+ 
 }

@@ -14,7 +14,7 @@ export class AddMediaComponent implements OnInit {
     description:new FormControl('',Validators.required),
  
   })
-  public videoForm:FormGroup=new FormGroup({
+  public VideoForm:FormGroup=new FormGroup({
     type:new FormControl('',Validators.required),
     description:new FormControl('',Validators.required),
  
@@ -37,7 +37,7 @@ export class AddMediaComponent implements OnInit {
     },err=>{
       console.log(err);
     })
-    this.dataService.addMedia(this.videoForm.value).subscribe(res=>{
+    this.dataService.addMedia(this.VideoForm.value).subscribe(res=>{
       //
     },err=>{
       console.log(err);
@@ -55,7 +55,7 @@ export class AddMediaComponent implements OnInit {
       this.ImageForm.patchValue({
         file: reader.result
       });
-      this.videoForm.patchValue({
+      this.VideoForm.patchValue({
         file: reader.result
       });
       this.pdfForm.patchValue({

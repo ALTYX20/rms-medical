@@ -77,10 +77,10 @@
                       
                       <td>{{item.description}}</td>
                       <td>
-                          <button type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="presentation details">
+                          <button type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="image details">
                               <i class="icon icon-pencil s-4"></i>
                           </button>
-                          <button type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="presentation details">
+                          <button type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="image details">
                             <i class="icon icon-trash s-4"></i>
                         </button>
                       </td>
@@ -90,10 +90,11 @@
                     
                     <td>{{item.description}}</td>
                     <td>
-                        <button type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="presentation details">
+                        <button type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="video details" input type="file">
+                         
                             <i class="icon icon-pencil s-4"></i>
                         </button>
-                        <button type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="presentation details">
+                        <button input type="file" type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="video details">
                           <i class="icon icon-trash s-4"></i>
                       </button>
                     </td>
@@ -103,10 +104,10 @@
                     
                     <td>{{item.description}}</td>
                     <td>
-                        <button type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="presentation details">
+                        <button input type="file" type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="pdf details">
                             <i class="icon icon-pencil s-4"></i>
                         </button>
-                        <button type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="presentation details">
+                        <button input type="file" type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="pdf details">
                           <i class="icon icon-trash s-4"></i>
                       </button>
                     </td>
