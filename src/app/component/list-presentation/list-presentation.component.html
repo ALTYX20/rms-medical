@@ -59,7 +59,7 @@
                         </th>
                         <th>
                             <div class="table-header">
-                                <span class="column-title">title</span>
+                                <span class="column-title">titre</span>
                             </div>
                         </th>
                         <th>
@@ -67,6 +67,13 @@
                                 <span class="column-title">territoires</span>
                             </div>
                         </th>
+                        <th>
+                            <div class="table-header">
+                                <span class="column-title">presentation creator</span>
+                            </div>
+                        </th>
+                      
+                   
                     </tr>
                 </thead>
   
@@ -79,16 +86,16 @@
                       
                       <td>{{item.title}}</td>
                       <td>{{item.territoires}}</td>
-                     
+                      <td>{{item.presentationCreator}}</td>
                       
                       
                       <td>
-                          <button type="button" (click)="modifyPresentation(item)" class="btn btn-icon" aria-label="presentation details">
-                              <i class="icon icon-pencil s-4"></i>
-                          </button>
-                          <button type="button" (click)="deletePresentation(item.id)" class="btn btn-icon" aria-label="presentation details">
-                            <i class="icon icon-trash s-4"></i>
+                        <button type="button" (click)="modifyPresentation(item)" class="btn btn-icon" aria-label="presentation details">
+                            <i class="icon icon-pencil s-4"></i>
                         </button>
+                        <button type="button" (click)="deletePresentation(item.id)" class="btn btn-icon" aria-label="presentation details">
+                          <i class="icon icon-trash s-4"></i>
+                      </button>
                       </td>
                   </tr>
   

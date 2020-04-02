@@ -10,13 +10,20 @@ import { Router } from '@angular/router';
 })
 export class AddPresentationComponent implements OnInit {
   public isLoading:boolean = false;
+  public errorMsg: any;
+
  presentationForm:FormGroup=new FormGroup({
    id:new FormControl('',Validators.required),
     titre:new FormControl('',Validators.required),
+    presentation_creator:new FormControl('',Validators.required),
+
+    project:new FormControl('',Validators.required),
+    media:new FormControl('',Validators.required),
+    referance:new FormControl('',Validators.required),
    territoires:new FormControl('',Validators.required),
-   presentation_creator:new FormControl('',Validators.required),
     
   })
+
 
   constructor(private dataService:DataService,private router:Router,private formBuilder:FormBuilder) { }
 
@@ -25,13 +32,14 @@ export class AddPresentationComponent implements OnInit {
     this.dataService.addPresentation(this.presentationForm.value).subscribe(res=>{
       console.log(res);
       if(res === "this presentation already exist"){
+        this.errorMsg = res;
         this.isLoading = false;
         return;
       }
       this.router.navigate(['list-presentation'])
     },err=>{
       console.log(err.statusText);
-      
+      this.errorMsg = err.statusText;
       this.isLoading = false;
     })
   }

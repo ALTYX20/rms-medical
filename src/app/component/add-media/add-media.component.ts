@@ -10,25 +10,20 @@ import { Router } from '@angular/router';
 })
 export class AddMediaComponent implements OnInit {
   public isLoading:boolean = false;
+  public errorMsg: any;
+
 
  
   public MediaForm:FormGroup=new FormGroup({
-    type:new FormControl('',Validators.required),
+    titre:new FormControl('',Validators.required),
     description:new FormControl('',Validators.required),
- 
-  })
-  /*
-  public VideoForm:FormGroup=new FormGroup({
+    lien:new FormControl('',Validators.required),
     type:new FormControl('',Validators.required),
-    description:new FormControl('',Validators.required),
- 
-  })
-  public pdfForm:FormGroup=new FormGroup({
-    type:new FormControl('',Validators.required),
-    description:new FormControl('',Validators.required),
- 
-  })*/
 
+
+  })
+
+ 
 
 
   constructor(private dataService:DataService,private cd:ChangeDetectorRef,private router:Router) { }
@@ -37,19 +32,22 @@ export class AddMediaComponent implements OnInit {
   }
   submit(){
     this.isLoading = true;
-    this.dataService.addMedia(this.MediaForm.value).subscribe(res=>{
+    this.dataService.addPresentation(this.MediaForm.value).subscribe(res=>{
       console.log(res);
       if(res === "this media already exist"){
+        this.errorMsg = res;
         this.isLoading = false;
         return;
       }
-      this.router.navigate(['list-Media'])
+      this.router.navigate(['list-media'])
     },err=>{
       console.log(err.statusText);
-      
+      this.errorMsg = err.statusText;
       this.isLoading = false;
     })
-   
+  }
+  getControlValue(name){
+    return this.MediaForm.get(name);
   }
   onFileChange(event){
     let reader = new FileReader();

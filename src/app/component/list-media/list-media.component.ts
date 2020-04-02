@@ -10,41 +10,27 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 })
 export class ListMediaComponent implements OnInit {
  
-  images:any[] = []
-  videos:any[] = []
-  pdf:any[] = []
+  
   medias:any[] = []
-  public ImageForm:FormGroup=new FormGroup({
-    type:new FormControl('',Validators.required),
-    description:new FormControl('',Validators.required),
  
-  })
-
   constructor(private dataService:DataService,private router:Router,cd:ChangeDetectorRef) {}
 
 
   ngOnInit(): void {
     this.dataService.getMediaDetails().subscribe(res=>{
-      this.images = res;
+      this.medias = res;
     },err=>console.log(err));
-    this.dataService.getMediaDetails().subscribe(res=>{
-      this.videos = res;
-    },err=>console.log(err));
-  
-    this.dataService.getMediaDetails().subscribe(res=>{
-      this.pdf = res;
-    },err=>console.log(err));
-  
+   
   }
 
   deleteMedia(id){
     this.dataService.deleteMedia(id).subscribe(res=>{
       console.log(res)
       //if (res === "")
-      for(let i of this.images){
+      for(let i of this.medias){
         if(i.id == id){
-          let index = this.images.indexOf(i);
-          this.images.splice(index,1);
+          let index = this.medias.indexOf(i);
+          this.medias.splice(index,1);
           break;
         }
       }

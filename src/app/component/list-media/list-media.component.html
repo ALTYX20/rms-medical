@@ -55,15 +55,15 @@
                 <thead>
                    
                     <tr>
-                        <mat-toolbar>
-                        <th >
-
-                            <button mat-button >Image</button> 
-                          </th> 
-                        </mat-toolbar>
+                       
                         <th>
                             <div class="table-header">
-                                <span class="column-title">type</span>
+                                <span class="column-title">id</span>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="table-header">
+                                <span class="column-title">titre</span>
                             </div>
                         </th>
 
@@ -72,80 +72,50 @@
                                 <span class="column-title">description</span>
                             </div>
                         </th>    
-                    </tr>
+                   
                 
-                  
-                    <tr>
-                        <mat-toolbar>
-                            <th >
-    
-                                <button mat-button >video</button> 
-                              </th> 
-                            </mat-toolbar>
-                          <th>
-                              <div class="table-header">
-                                  <span class="column-title">type</span>
-                              </div>
-                          </th>
-  
-                          <th>
-                              <div class="table-header">
-                                  <span class="column-title">description</span>
-                              </div>
-                          </th>    
-                      </tr>
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title">lien</span>
+                        </div>
+                    </th>  
                     
-                      <tr>
-                        <mat-toolbar>
-                            <th >
-    
-                                <button mat-button >pdf</button> 
-                              </th> 
-                            </mat-toolbar>
-                          <th>
-                         
-                              <div class="table-header">
-                                  <span class="column-title">type</span>
-                              </div>
-                          </th>
-  
-                          <th>
-                              <div class="table-header">
-                                  <span class="column-title">description</span>
-                              </div>
-                          </th>    
-                      </tr>
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title">type</span>
+                        </div>
+                    </th>    
+                </tr>  
+            
                     
+                    
+                      
                 </thead>
   
                 <tbody>
   
-                    <tr *ngFor="let item of images">
-                      <td>{{item.type}}</td>
+                    <tr *ngFor="let item of medias">
+                        <td>{{item.id}}</td>
+
+                      <td>{{item.titre}}</td>
                       
                       <td>{{item.description}}</td>
+                      <td>{{item.lien}}</td>
+                      <td>{{item.type}}</td>
+
                       
-                  </tr>
-                  <tr *ngFor="let item of videos">
-                    <td>{{item.type}}</td>
-                    
-                    <td>{{item.description}}</td>
+                 
+            
                     <td>
-                        <button type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="video details" input type="file">
-                         
+                        <button type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="media details">
                             <i class="icon icon-pencil s-4"></i>
                         </button>
-                        <button input type="file" type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="video details">
+                        <button type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="media details">
                           <i class="icon icon-trash s-4"></i>
                       </button>
                     </td>
                 </tr>
-                <tr *ngFor="let item of pdf">
-                    <td>{{item.type}}</td>
-                    
-                    <td>{{item.description}}</td>
-                  
-                </tr>
+              
 
   
                 </tbody>
