@@ -17,10 +17,7 @@ export class AddPresentationComponent implements OnInit {
     titre:new FormControl('',Validators.required),
     presentation_creator:new FormControl('',Validators.required),
 
-    project:new FormControl('',Validators.required),
-    media:new FormControl('',Validators.required),
-    referance:new FormControl('',Validators.required),
-   territoires:new FormControl('',Validators.required),
+   
     
   })
 
