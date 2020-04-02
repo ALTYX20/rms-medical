@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { DataserviceService } from 'src/app/services/dataservice.service';
+import { DataService } from 'src/app/services/data.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
 
@@ -13,22 +13,14 @@ export class ListMediaComponent implements OnInit {
   images:any[] = []
   videos:any[] = []
   pdf:any[] = []
+  medias:any[] = []
   public ImageForm:FormGroup=new FormGroup({
     type:new FormControl('',Validators.required),
     description:new FormControl('',Validators.required),
  
   })
-  public VideoForm:FormGroup=new FormGroup({
-    type:new FormControl('',Validators.required),
-    description:new FormControl('',Validators.required),
- 
-  })
-  public pdfForm:FormGroup=new FormGroup({
-    type:new FormControl('',Validators.required),
-    description:new FormControl('',Validators.required),
- 
-  })
-  constructor(private dataService:DataserviceService,private router:Router,cd:ChangeDetectorRef) {}
+
+  constructor(private dataService:DataService,private router:Router,cd:ChangeDetectorRef) {}
 
 
   ngOnInit(): void {
@@ -57,29 +49,7 @@ export class ListMediaComponent implements OnInit {
         }
       }
     })
-    this.dataService.deleteMedia(id).subscribe(res=>{
-      console.log(res)
-      //if (res === "")
-      for(let v of this.videos){
-        if(v.id == id){
-          let index = this.images.indexOf(v);
-          this.videos.splice(index,1);
-          break;
-        }
-      }
-    })
-    this.dataService.deleteMedia(id).subscribe(res=>{
-      console.log(res)
-      //if (res === "")
-      for(let f of this.pdf){
-        if(f.id == id){
-          let index = this.pdf.indexOf(f);
-          this.pdf.splice(index,1);
-          break;
-        }
-      }
-    })
-  }
+  } 
   
   modifyMedia(item){
     

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormControl, FormBuilder } from '@angular/forms';
-import { DataserviceService } from 'src/app/service/dataservice.service';
+import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,25 +9,35 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-presentation.component.scss']
 })
 export class AddPresentationComponent implements OnInit {
-
+  public isLoading:boolean = false;
  presentationForm:FormGroup=new FormGroup({
    id:new FormControl('',Validators.required),
-    title:new FormControl('',Validators.required),
+    titre:new FormControl('',Validators.required),
    territoires:new FormControl('',Validators.required),
-   presentation_creator_id:new FormControl('',Validators.required),
+   presentation_creator:new FormControl('',Validators.required),
     
   })
 
-  constructor(private dataService:DataserviceService,private router:Router,private formBuilder:FormBuilder) { }
+  constructor(private dataService:DataService,private router:Router,private formBuilder:FormBuilder) { }
 
   submit(){
-    const form = this.presentationForm.value;
-    this.dataService.addPresentation(form).subscribe(res=>{
+    this.isLoading = true;
+    this.dataService.addPresentation(this.presentationForm.value).subscribe(res=>{
       console.log(res);
-      this.router.navigate(['listPresentation'])
+      if(res === "this presentation already exist"){
+        this.isLoading = false;
+        return;
+      }
+      this.router.navigate(['list-presentation'])
+    },err=>{
+      console.log(err.statusText);
+      
+      this.isLoading = false;
     })
   }
-
+  getControlValue(name){
+    return this.presentationForm.get(name);
+  }
   ngOnInit(): void {
     
     

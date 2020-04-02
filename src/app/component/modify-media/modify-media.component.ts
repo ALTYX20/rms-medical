@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { DataserviceService } from 'src/app/services/dataservice.service';
+import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +13,7 @@ export class ModifyMediaComponent implements OnInit {
   public videoForm:FormGroup;
   public pdfForm:FormGroup;
   item:any;
-  constructor(private dataService:DataserviceService,private router:Router) { 
+  constructor(private dataService:DataService,private router:Router) { 
     this.item = this.router.getCurrentNavigation().extras.state;
     console.log(this.item)
     this.ImageForm = new FormGroup({

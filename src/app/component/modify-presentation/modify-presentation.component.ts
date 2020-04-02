@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataserviceService } from 'src/app/service/dataservice.service';
+import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -13,7 +13,7 @@ export class ModifyPresentationComponent implements OnInit {
    presentationForm:FormGroup;
   item:any;
 
-  constructor(private dataService:DataserviceService,private router:Router) {
+  constructor(private dataService:DataService,private router:Router) {
     
     this.item = this.router.getCurrentNavigation().extras.state;
     console.log(this.item)
@@ -28,7 +28,7 @@ export class ModifyPresentationComponent implements OnInit {
   submit(){
     this.dataService.modifyPresentation(this.presentationForm.value).subscribe(res=>{
       console.log(res);
-      this.router.navigate(['listpresentation'])
+      this.router.navigate(['list-presentation'])
     },err=>{
       console.log(err);
     })

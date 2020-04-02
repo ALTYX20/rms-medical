@@ -9,13 +9,24 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
+import { ModifyPresentationComponent } from './component/modify-presentation/modify-presentation.component';
+import { ModifyReferenceComponent } from './component/modify-reference/modify-reference.component';
+import { AddMediaComponent } from './component/add-media/add-media.component';
+import { ListMediaComponent } from './component/list-media/list-media.component';
+import { ModifyMediaComponent } from './component/modify-media/modify-media.component';
 
+import { RouterModule } from '@angular/router';
+import { AddReferenceComponent } from './component/add-reference/add-reference.component';
+import { ListReferenceComponent } from './component/list-reference/list-reference.component';
+import { AddPresentationComponent } from './component/add-presentation/add-presentation.component';
+
+import { ListPresentationComponent } from './component/list-presentation/list-presentation.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
 //Angular Material Components
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatButtonModule} from '@angular/material/button';
+
 import {MatInputModule} from '@angular/material/input';
 // import {MatAutocompleteModule} from '@angular/material/autocomplete';
 // import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -33,13 +44,14 @@ import {MatListModule} from '@angular/material/list';
 import {MatStepperModule} from '@angular/material/stepper';
 // import {MatTabsModule} from '@angular/material/tabs';
 // import {MatExpansionModule} from '@angular/material/expansion';
-// import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatButtonModule} from '@angular/material/button';
+
 // import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 // import {MatProgressBarModule} from '@angular/material/progress-bar';
 // import {MatDialogModule} from '@angular/material/dialog';
-// import {MatTooltipModule} from '@angular/material/tooltip';
+ import { MatToolbarModule, } from '@angular/material/toolbar';
 // import {MatSnackBarModule} from '@angular/material/snack-bar';
 // import {MatTableModule} from '@angular/material/table';
 // import {MatSortModule} from '@angular/material/sort';
@@ -51,8 +63,7 @@ import { ListprojectComponent } from './component/listproject/listproject.compon
 import { AddprojectComponent } from './component/addproject/addproject.component';
 import { AddcompanyComponent } from './component/addcompany/addcompany.component';
 import { ListcompanyComponent } from './component/listcompany/listcompany.component';
-import { ListpresentationComponent } from './component/listpresentation/listpresentation.component';
-import { AddpresentationComponent } from './component/addpresentation/addpresentation.component';
+
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { AddComponent } from './add/add.component';
 import { ModifyproductComponent } from './component/modifyproduct/modifyproduct.component';
@@ -81,10 +92,16 @@ import { ModifycompanyComponent } from './component/modifycompany/modifycompany.
 
     ListcompanyComponent,
 
-    ListpresentationComponent,
+    ListPresentationComponent,
 
-    AddpresentationComponent,
-
+    AddPresentationComponent,
+    ModifyMediaComponent,
+    ModifyPresentationComponent,
+    ModifyReferenceComponent,
+    ListMediaComponent,
+    ListReferenceComponent,
+AddMediaComponent,
+AddReferenceComponent,
     DashboardComponent,
 
     AddComponent,
@@ -115,7 +132,7 @@ import { ModifycompanyComponent } from './component/modifycompany/modifycompany.
     // MatToolbarModule,
     MatListModule,
     // MatGridListModule,
-    // MatCardModule,
+    MatToolbarModule, 
     MatStepperModule,
     // MatTabsModule,
     // MatExpansionModule,

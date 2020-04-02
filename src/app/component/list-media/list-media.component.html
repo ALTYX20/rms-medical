@@ -18,9 +18,7 @@
                     </div>
                     <div class="logo-text">
                         <div class="h4">media</div>
-                        <div class="">Total presentation: {{images.length}}</div>
-                        <div class="">Total presentation: {{videos.length}}</div>
-                        <div class="">Total presentation: {{pdf.length}}</div>
+                      
 
 
                     </div>
@@ -55,7 +53,14 @@
   
             <table id="Media-table" class="table dataTable">
                 <thead>
+                   
                     <tr>
+                        <mat-toolbar>
+                        <th >
+
+                            <button mat-button >Image</button> 
+                          </th> 
+                        </mat-toolbar>
                         <th>
                             <div class="table-header">
                                 <span class="column-title">type</span>
@@ -68,6 +73,49 @@
                             </div>
                         </th>    
                     </tr>
+                
+                  
+                    <tr>
+                        <mat-toolbar>
+                            <th >
+    
+                                <button mat-button >video</button> 
+                              </th> 
+                            </mat-toolbar>
+                          <th>
+                              <div class="table-header">
+                                  <span class="column-title">type</span>
+                              </div>
+                          </th>
+  
+                          <th>
+                              <div class="table-header">
+                                  <span class="column-title">description</span>
+                              </div>
+                          </th>    
+                      </tr>
+                    
+                      <tr>
+                        <mat-toolbar>
+                            <th >
+    
+                                <button mat-button >pdf</button> 
+                              </th> 
+                            </mat-toolbar>
+                          <th>
+                         
+                              <div class="table-header">
+                                  <span class="column-title">type</span>
+                              </div>
+                          </th>
+  
+                          <th>
+                              <div class="table-header">
+                                  <span class="column-title">description</span>
+                              </div>
+                          </th>    
+                      </tr>
+                    
                 </thead>
   
                 <tbody>
@@ -76,14 +124,7 @@
                       <td>{{item.type}}</td>
                       
                       <td>{{item.description}}</td>
-                      <td>
-                          <button type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="image details">
-                              <i class="icon icon-pencil s-4"></i>
-                          </button>
-                          <button type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="image details">
-                            <i class="icon icon-trash s-4"></i>
-                        </button>
-                      </td>
+                      
                   </tr>
                   <tr *ngFor="let item of videos">
                     <td>{{item.type}}</td>
@@ -103,14 +144,7 @@
                     <td>{{item.type}}</td>
                     
                     <td>{{item.description}}</td>
-                    <td>
-                        <button input type="file" type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="pdf details">
-                            <i class="icon icon-pencil s-4"></i>
-                        </button>
-                        <button input type="file" type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="pdf details">
-                          <i class="icon icon-trash s-4"></i>
-                      </button>
-                    </td>
+                  
                 </tr>
 
   

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { DataserviceService } from 'src/app/service/dataservice.service';
+import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,24 +9,39 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-reference.component.scss']
 })
 export class AddReferenceComponent implements OnInit {
-
+  public isLoading:boolean = false;
+  public errorMsg: any;
 referenceForm:FormGroup=new FormGroup({
-    id:new FormControl('',Validators.required),
-     title:new FormControl('',Validators.required),
+   // id:new FormControl('',Validators.required),
+     titre:new FormControl('',Validators.required),
    description:new FormControl('',Validators.required),
   
      
    })
  
-   constructor(private dataService:DataserviceService,private router:Router) { }
+   constructor(private dataService:DataService,private router:Router) { }
  
+  
    submit(){
-     const form = this.referenceForm.value;
-     this.dataService.addReference(form).subscribe(res=>{
-       console.log(res);
-       this.router.navigate(['listReference'])
-     })
-   }
+    this.isLoading = true;
+    this.dataService.addReference(this.referenceForm.value).subscribe(res=>{
+      console.log(res);
+      if(res === "this presentation already exist"){
+        this.errorMsg = res;
+
+        this.isLoading = false;
+        return;
+      }
+      this.router.navigate(['list-reference'])
+    },err=>{
+      console.log(err.statusText);
+      this.errorMsg = err.statusText;
+      this.isLoading = false;
+    })
+  }
+  getControlValue(name){
+  return this.referenceForm.get(name);
+}
   ngOnInit(): void {
   }
 
