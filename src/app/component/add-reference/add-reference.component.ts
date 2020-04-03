@@ -26,7 +26,7 @@ referenceForm:FormGroup=new FormGroup({
     this.isLoading = true;
     this.dataService.addReference(this.referenceForm.value).subscribe(res=>{
       console.log(res);
-      if(res === "this presentation already exist"){
+      if(res === "this reference already exist"){
         this.errorMsg = res;
 
         this.isLoading = false;

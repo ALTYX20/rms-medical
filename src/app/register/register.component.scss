@@ -1,13 +1,9 @@
-// ::ng-deep .mat-horizontal-stepper-header{
-//   pointer-events: none !important;
-// }
+::ng-deep .mat-horizontal-stepper-header{
+  pointer-events: none !important;
+}
 
 .back{
 height: 100%;
-}
-
-.content-wrapper{
-  //height: 1500px;
 }
 
 #logo{
@@ -29,5 +25,5 @@ height: 100%;
 
   padding-bottom: 5vh;
   //height: 90vh;
-  overflow-y: auto;
+  //overflow-y: auto;
 }

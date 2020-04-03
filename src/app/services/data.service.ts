@@ -17,12 +17,23 @@ export class DataService {
 
   addProject(proj){
     console.log(proj);
-    return this.http.post("http://127.0.0.1:8000/api/product",proj);
+    return this.http.post("http://127.0.0.1:8000/api/project",proj);
   }
 
   addCompany(comp){
-    console.log(comp);
-    return this.http.post("http://127.0.0.1:8000/api/company",comp);
+    return this.http.post<any>("http://127.0.0.1:8000/api/company",comp);
+  }
+
+  addPresentation(pres){
+    return this.http.post("http://127.0.0.1:8000/api/presentaion",pres);
+  }
+
+  addMedia(med){
+    return this.http.post("http://127.0.0.1:8000/api/media",med);
+  }
+
+  addRef(ref){
+    return this.http.post("http://127.0.0.1:8000/api/reference",ref);
   }
 
   getProdList(){
@@ -35,6 +46,18 @@ export class DataService {
 
   getCompList(){
     return this.http.get<any[]>("http://127.0.0.1:8000/api/companys");
+  }
+
+  getPresList(){
+    return this.http.get<any[]>("http://127.0.0.1:8000/api/presentation");
+  }
+
+  getMedList(){
+    return this.http.get<any[]>("http://127.0.0.1:8000/api/media");
+  }
+
+  getRefList(){
+    return this.http.get<any[]>("http://127.0.0.1:8000/api/referance");
   }
 
   deleteProd(id){
@@ -52,6 +75,21 @@ export class DataService {
     return this.http.request('delete', 'http://127.0.0.1:8000/api/company', { body: payload });
   }
 
+  deletePres(id){
+    const payload = {id};
+    return this.http.request('delete', 'http://127.0.0.1:8000/api/presentation', { body: payload });
+  }
+
+  deleteMed(id){
+    const payload = {id};
+    return this.http.request('delete', 'http://127.0.0.1:8000/api/media', { body: payload });
+  }
+
+  deleteRef(id){
+    const payload = {id};
+    return this.http.request('delete', 'http://127.0.0.1:8000/api/reference', { body: payload });
+  }
+
   modifyProd(prod){
     console.log(prod);
     return this.http.put("http://127.0.0.1:8000/api/product",prod);
@@ -66,62 +104,20 @@ export class DataService {
     console.log(comp);
     return this.http.put("http://127.0.0.1:8000/api/company",comp);
   }
-  addPresentation(presentation){
-    console.log(presentation);
-    return this.http.post("http://127.0.0.1:8000/api/presentation",presentation);
+
+  modifyPres(comp){
+    console.log(comp);
+    return this.http.put("http://127.0.0.1:8000/api/presentation",comp);
   }
 
-  addReference(reference){
-    console.log(reference);
-    return this.http.post("http://127.0.0.1:8000/api/referance",reference);
+  modifyMed(comp){
+    console.log(comp);
+    return this.http.put("http://127.0.0.1:8000/api/media",comp);
   }
 
-  addMedia(media){
-    console.log(media);
-    return this.http.post("http://127.0.0.1:8000/api/media",media);
+  modifyRef(comp){
+    console.log(comp);
+    return this.http.put("http://127.0.0.1:8000/api/reference",comp);
   }
-
-  getPresenatationDetails(){
-    return this.http.get<any[]>("http://127.0.0.1:8000/api/presentation");
-  }
-
-  getReferenceDetails(){
-    return this.http.get<any[]>("http://127.0.0.1:8000/api/referance");
-  }
-
-  getMediaDetails(){
-    return this.http.get<any[]>("http://127.0.0.1:8000/api/media");
-  }
-
-  deletePresentation(id){
-    const payload = {id};
-    return this.http.request('delete', 'http://127.0.0.1:8000/api/presentation', { body: payload });
-  }
-
-  deleteReference(id){
-    const payload = {id};
-    return this.http.request('delete', 'http://127.0.0.1:8000/api/referance', { body: payload });
-  }
-
-  deleteMedia(id){
-    const payload = {id};
-    return this.http.request('delete', 'http://127.0.0.1:8000/api/media', { body: payload });
-  }
-
-  modifyPresentation(presentation){
-    console.log(presentation);
-    return this.http.put("http://127.0.0.1:8000/api/presentation",presentation);
-  }
-
-  modifyReference(reference){
-    console.log(reference);
-    return this.http.put("http://127.0.0.1:8000/api/referance",reference);
-  }
-
-  modifyMedia(media){
-    console.log(media);
-    return this.http.put("http://127.0.0.1:8000/api/media",media);
-  }
-
 
 }
