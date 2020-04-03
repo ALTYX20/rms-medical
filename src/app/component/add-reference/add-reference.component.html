@@ -100,7 +100,6 @@
                         type="submit"
                         color="primary"
                         style="width: 100%;"
-                        [disabled]="referenceForm.invalid || isLoading"
                       >
                         <span *ngIf="!isLoading">Add Reference</span>
                         <div *ngIf="isLoading" class="spinner-border" role="status">

@@ -12,7 +12,7 @@ export class AddPresentationComponent implements OnInit {
   public isLoading:boolean = false;
   public errorMsg: any;
 
- presentationForm:FormGroup=new FormGroup({
+  presentationForm:FormGroup=new FormGroup({
    id:new FormControl('',Validators.required),
     titre:new FormControl('',Validators.required),
     presentation_creator:new FormControl('',Validators.required),
@@ -22,7 +22,7 @@ export class AddPresentationComponent implements OnInit {
   })
 
 
-  constructor(private dataService:DataService,private router:Router,private formBuilder:FormBuilder) { }
+  constructor(private dataService:DataService,private router:Router) { }
 
   submit(){
     this.isLoading = true;
@@ -30,6 +30,7 @@ export class AddPresentationComponent implements OnInit {
       console.log(res);
       if(res === "this presentation already exist"){
         this.errorMsg = res;
+
         this.isLoading = false;
         return;
       }

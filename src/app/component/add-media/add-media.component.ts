@@ -32,7 +32,7 @@ export class AddMediaComponent implements OnInit {
   }
   submit(){
     this.isLoading = true;
-    this.dataService.addPresentation(this.MediaForm.value).subscribe(res=>{
+    this.dataService.addMedia(this.MediaForm.value).subscribe(res=>{
       console.log(res);
       if(res === "this media already exist"){
         this.errorMsg = res;
