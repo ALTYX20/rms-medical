@@ -17,7 +17,9 @@ import { DataService } from "../services/data.service";
   styleUrls: ["./register.component.scss"]
 })
 export class RegisterComponent implements OnInit {
+  
   isUserLoggedIn = false;
+  isLoading:boolean = false;
   panelOpenState = true;
   errorMsg: string;
   wrongInput:boolean = false;
@@ -31,7 +33,7 @@ export class RegisterComponent implements OnInit {
 
   personalInfo: FormGroup;
 
-  nbOfUsers: FormControl = new FormControl("6", Validators.required);
+  nbOfUsers: FormControl = new FormControl(6, Validators.required);
 
   addUserForm: FormGroup;
 
@@ -111,9 +113,9 @@ export class RegisterComponent implements OnInit {
 
     this.technicalInfo = new FormGroup({
       period_subscription: new FormControl("12", Validators.required),
-      databasesize: new FormControl("20", Validators.required),
+      databasesize: new FormControl(20, Validators.required),
       slatype: new FormControl("15", Validators.required),
-      supporttype: new FormControl("20", Validators.required)
+      supporttype: new FormControl("support1", Validators.required)
     });
 
     this.addUserForm = new FormGroup(
@@ -127,13 +129,15 @@ export class RegisterComponent implements OnInit {
   }
 
   login() {
+    this.isLoading = true;
     const creds = this.loginForm.value;
     if (this.loginForm.valid) {
       console.log(creds);
       this.authService.login(creds).subscribe(res => {
-        if (res) this.router.navigate([""]);
+        if (res) window.location.href = "http://localhost:4200/"//this.router.navigate([""]);
       });
     } else {
+      this.isLoading = false;
       this.errorMsg = "Please verify your input.";
     }
   }
@@ -170,17 +174,29 @@ export class RegisterComponent implements OnInit {
   }
 
   submitPersonalInfo(stepper:MatStepper){
-    console.log("submitPersonalInfo")
-    this.admins.push({
-      name: this.getControlValue('name').value,
-      email: this.getControlValue('email').value,
-      role: 'admins'
-    })
+    
     stepper.next()
   }
 
-  submitAll() {
-    let employee = [this.admins, this.managers, this.editors, this.viewers];
+  finish(){
+    window.location.href = "http://localhost:4200/"//this.router.navigate([""]);
+  }
+
+  submitAll(stepper) {
+    this.isLoading = true;
+    let employee = [[], [], [], []];
+    for(let u of this.admins){
+      employee[0].push(u.email)
+    }
+    for(let u of this.managers){
+      employee[1].push(u.email)
+    }
+    for(let u of this.editors){
+      employee[2].push(u.email)
+    }
+    for(let u of this.viewers){
+      employee[3].push(u.email)
+    }
     let data = {
       ...this.personalInfo.value,
       ...this.technicalInfo.value,
@@ -192,15 +208,12 @@ export class RegisterComponent implements OnInit {
     let subperiod = this.MonthToMs(Number(data.period_subscription));
     let date = new Date(time + subperiod);
     data.period_subscription = date.toISOString();
+    delete data.confpass;
     console.log(Object.keys(data).length);
     console.log(data);
-    this.dataService.addCompany(data).subscribe(res => {
-      console.log(res);
-      if (res == "company already exist") {
-        alert(res);
-        return;
-      }
-      this.router.navigate([""]);
+    this.authService.register(data).subscribe(res => {
+      if (res) stepper.next()//this.router.navigate([""]);
+      this.isLoading = false;
     });
   }
 
@@ -225,8 +238,11 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //window.location.reload();
+    if(this.authService.currentUserValue) window.location.href = "http://localhost:4200/"//this.router.navigate([''])
     this.authService.getError().subscribe(res => {
       this.errorMsg = res;
+      this.isLoading = false;
     });
   }
 }

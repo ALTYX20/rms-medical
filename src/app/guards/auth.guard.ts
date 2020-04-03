@@ -13,13 +13,13 @@ export class AuthGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return true;
+    return this.checkCreds();
   }
 
   checkCreds(){
     let currentUser = this.authService.currentUserValue;
     if(currentUser) return true;
-    this.router.navigate(['login']);
+    this.router.navigate(['register']);
     return false;
   }
   

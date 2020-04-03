@@ -17,12 +17,13 @@ export class DataService {
 
   addProject(proj){
     console.log(proj);
-    return this.http.post("http://127.0.0.1:8000/api/product",proj);
+    return this.http.post("http://127.0.0.1:8000/api/project",proj);
   }
 
   addCompany(comp){
-    console.log(comp);
-    return this.http.post("http://127.0.0.1:8000/api/company",comp);
+    return this.http.post<any>("http://127.0.0.1:8000/api/company",comp);
+  }
+
   }
 
   getProdList(){

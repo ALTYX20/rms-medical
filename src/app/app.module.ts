@@ -23,10 +23,17 @@ import { AddPresentationComponent } from './component/add-presentation/add-prese
 import { ListPresentationComponent } from './component/list-presentation/list-presentation.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
+
 //Angular Material Components
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // import {MatCheckboxModule} from '@angular/material/checkbox';
-
+import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 // import {MatAutocompleteModule} from '@angular/material/autocomplete';
 // import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -46,12 +53,14 @@ import {MatStepperModule} from '@angular/material/stepper';
 // import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonModule} from '@angular/material/button';
 
+// import {MatButtonToggleModule} from '@angular/material/button-toggle';
 // import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 // import {MatProgressBarModule} from '@angular/material/progress-bar';
 // import {MatDialogModule} from '@angular/material/dialog';
  import { MatToolbarModule, } from '@angular/material/toolbar';
+// import {MatTooltipModule} from '@angular/material/tooltip';
 // import {MatSnackBarModule} from '@angular/material/snack-bar';
 // import {MatTableModule} from '@angular/material/table';
 // import {MatSortModule} from '@angular/material/sort';
@@ -151,7 +160,14 @@ AddReferenceComponent,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PerfectScrollbarModule
+  ],
+  providers: [
+    {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
   ],
   providers: [],
   bootstrap: [AppComponent]
