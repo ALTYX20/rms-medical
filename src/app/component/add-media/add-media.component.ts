@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { DataService } from 'src/app/services/data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-media',
@@ -8,60 +9,54 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./add-media.component.scss']
 })
 export class AddMediaComponent implements OnInit {
- 
-  public ImageForm:FormGroup=new FormGroup({
-    type:new FormControl('',Validators.required),
-    description:new FormControl('',Validators.required),
- 
-  })
-  public VideoForm:FormGroup=new FormGroup({
-    type:new FormControl('',Validators.required),
-    description:new FormControl('',Validators.required),
- 
-  })
-  public pdfForm:FormGroup=new FormGroup({
-    type:new FormControl('',Validators.required),
-    description:new FormControl('',Validators.required),
- 
-  })
+  public isLoading:boolean = false;
+  public errorMsg: any;
 
 
+ 
+  public MediaForm:FormGroup=new FormGroup({
+    titre:new FormControl('',Validators.required),
+    description:new FormControl('',Validators.required),
+    lien:new FormControl('',Validators.required),
+    type:new FormControl('',Validators.required),
 
-  constructor(private dataService:DataService,private cd:ChangeDetectorRef) { }
+
+  })
+
+ 
+
+
+  constructor(private dataService:DataService,private cd:ChangeDetectorRef,private router:Router) { }
   ngOnInit(): void {
   
   }
   submit(){
-    this.dataService.addMedia(this.ImageForm.value).subscribe(res=>{
-      //
+    this.isLoading = true;
+    this.dataService.addMedia(this.MediaForm.value).subscribe(res=>{
+      console.log(res);
+      if(res === "this media already exist"){
+        this.errorMsg = res;
+        this.isLoading = false;
+        return;
+      }
+      this.router.navigate(['list-media'])
     },err=>{
-      console.log(err);
-    })
-    this.dataService.addMedia(this.VideoForm.value).subscribe(res=>{
-      //
-    },err=>{
-      console.log(err);
-    })
-    this.dataService.addMedia(this.pdfForm.value).subscribe(res=>{
-      //
-    },err=>{
-      console.log(err);
+      console.log(err.statusText);
+      this.errorMsg = err.statusText;
+      this.isLoading = false;
     })
   }
-
+  getControlValue(name){
+    return this.MediaForm.get(name);
+  }
   onFileChange(event){
     let reader = new FileReader();
     const [file]  = event.target.files;
     reader.onload = () => {
-      this.ImageForm.patchValue({
+      this.MediaForm.patchValue({
         file: reader.result
       });
-      this.VideoForm.patchValue({
-        file: reader.result
-      });
-      this.pdfForm.patchValue({
-        file: reader.result
-      })
+     
       // need to run CD since file load runs outside of zone
       this.cd.markForCheck();
     }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-modify-presentation',
@@ -11,29 +11,45 @@ import { DataService } from 'src/app/services/data.service';
 export class ModifyPresentationComponent implements OnInit {
 
    presentationForm:FormGroup;
-  item:any;
+   item:any;
+   public errorMsg: any;
+
+   public isLoading:boolean = false;
 
   constructor(private dataService:DataService,private router:Router) {
     
     this.item = this.router.getCurrentNavigation().extras.state;
     console.log(this.item)
     this.presentationForm = new FormGroup({
-      title:new FormControl(this.item.title,Validators.required),
+      id:new FormControl(this.item.id,Validators.required),
+
+      titre:new FormControl(this.item.titre,Validators.required),
       territories:new FormControl(this.item.territories,Validators.required),
-      logo:new FormControl(this.item.logo),
-      status:new FormControl('1')
+      project:new FormControl(this.item.territories,Validators.required),
+     media:new FormControl(this.item.territories,Validators.required),
+
     })
   }
 
   submit(){
-    this.dataService.modifyPres(this.presentationForm.value).subscribe(res=>{
+    this.isLoading = true;
+    this.dataService.modifyPresentation(this.presentationForm.value).subscribe(res=>{
       console.log(res);
+      if(res === "this presentation already exist"){
+        this.errorMsg = res;
+        this.isLoading = false;
+        return;
+      }
       this.router.navigate(['listpresentation'])
     },err=>{
-      console.log(err);
+      console.log(err.statusText);
+      this.errorMsg = err.statusText;
+      this.isLoading = false;
     })
   }
-
+  getControlValue(name){
+    return this.presentationForm.get(name);
+  }
   ngOnInit(): void {
   }
 

@@ -18,9 +18,7 @@
                     </div>
                     <div class="logo-text">
                         <div class="h4">media</div>
-                        <div class="">Total Images: {{images.length}}</div>
-                        <div class="">Total Videos: {{videos.length}}</div>
-                        <div class="">Total Pdf: {{pdf.length}}</div>
+                      
 
 
                     </div>
@@ -55,10 +53,17 @@
   
             <table id="Media-table" class="table dataTable">
                 <thead>
+                   
                     <tr>
+                       
                         <th>
                             <div class="table-header">
-                                <span class="column-title">type</span>
+                                <span class="column-title">id</span>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="table-header">
+                                <span class="column-title">titre</span>
                             </div>
                         </th>
 
@@ -67,51 +72,50 @@
                                 <span class="column-title">description</span>
                             </div>
                         </th>    
-                    </tr>
+                   
+                
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title">lien</span>
+                        </div>
+                    </th>  
+                    
+                    <th>
+                        <div class="table-header">
+                            <span class="column-title">type</span>
+                        </div>
+                    </th>    
+                </tr>  
+            
+                    
+                    
+                      
                 </thead>
   
                 <tbody>
   
-                    <tr *ngFor="let item of images">
-                      <td>{{item.type}}</td>
+                    <tr *ngFor="let item of medias">
+                        <td>{{item.id}}</td>
+
+                      <td>{{item.titre}}</td>
                       
                       <td>{{item.description}}</td>
-                      <td>
-                          <button type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="image details">
-                              <i class="icon icon-pencil s-4"></i>
-                          </button>
-                          <button type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="image details">
-                            <i class="icon icon-trash s-4"></i>
-                        </button>
-                      </td>
-                  </tr>
-                  <tr *ngFor="let item of videos">
-                    <td>{{item.type}}</td>
-                    
-                    <td>{{item.description}}</td>
+                      <td>{{item.lien}}</td>
+                      <td>{{item.type}}</td>
+
+                      
+                 
+            
                     <td>
-                        <button type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="video details" input type="file">
-                         
+                        <button type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="media details">
                             <i class="icon icon-pencil s-4"></i>
                         </button>
-                        <button input type="file" type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="video details">
+                        <button type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="media details">
                           <i class="icon icon-trash s-4"></i>
                       </button>
                     </td>
                 </tr>
-                <tr *ngFor="let item of pdf">
-                    <td>{{item.type}}</td>
-                    
-                    <td>{{item.description}}</td>
-                    <td>
-                        <button input type="file" type="button" (click)="modifyMedia(item)" class="btn btn-icon" aria-label="pdf details">
-                            <i class="icon icon-pencil s-4"></i>
-                        </button>
-                        <button input type="file" type="button" (click)="deleteMedia(item.id)" class="btn btn-icon" aria-label="pdf details">
-                          <i class="icon icon-trash s-4"></i>
-                      </button>
-                    </td>
-                </tr>
+              
 
   
                 </tbody>

@@ -34,14 +34,14 @@
                             <i class="icon icon-magnify"></i>
                         </button>
                     </span>
-                    <input id="reference-search-input" type="text" class="form-control" placeholder="Search" aria-label="Search" />
+                    <input id="presentation-search-input" type="text" class="form-control" placeholder="Search" aria-label="Search" />
                 </div>
   
             </div>
             <!-- / SEARCH -->
   
             <div class="col-auto">
-                <a [routerLink]="['/addpresentation']" routerLinkActive="router-link-active"  class="btn btn-light">ADD presentation</a>
+                <a [routerLink]="['/add-presentation']" routerLinkActive="router-link-active"  class="btn btn-light">ADD presentation</a>
             </div>
   
         </div>
@@ -57,28 +57,23 @@
                                 <span class="column-title">ID</span>
                             </div>
                         </th>
-  
-                        
-  
                         <th>
                             <div class="table-header">
-                                <span class="column-title">title</span>
+                                <span class="column-title">titre</span>
                             </div>
                         </th>
-  
-                        
-  
                         <th>
                             <div class="table-header">
                                 <span class="column-title">territoires</span>
                             </div>
                         </th>
-  
-                        
-  
-                       
-  
+                        <th>
+                            <div class="table-header">
+                                <span class="column-title">presentation creator</span>
+                            </div>
+                        </th>
                       
+                   
                     </tr>
                 </thead>
   
@@ -91,16 +86,16 @@
                       
                       <td>{{item.title}}</td>
                       <td>{{item.territoires}}</td>
-                     
+                      <td>{{item.presentationCreator}}</td>
                       
                       
                       <td>
-                          <button type="button" (click)="modifyPresentation(item)" class="btn btn-icon" aria-label="presentation details">
-                              <i class="icon icon-pencil s-4"></i>
-                          </button>
-                          <button type="button" (click)="deletePresentation(item.id)" class="btn btn-icon" aria-label="presentation details">
-                            <i class="icon icon-trash s-4"></i>
+                        <button type="button" (click)="modifyPresentation(item)" class="btn btn-icon" aria-label="presentation details">
+                            <i class="icon icon-pencil s-4"></i>
                         </button>
+                        <button type="button" (click)="deletePresentation(item.id)" class="btn btn-icon" aria-label="presentation details">
+                          <i class="icon icon-trash s-4"></i>
+                      </button>
                       </td>
                   </tr>
   

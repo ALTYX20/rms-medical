@@ -10,25 +10,42 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class AddpresentationComponent implements OnInit {
 
-  presentationForm:FormGroup=new FormGroup({
-    id:new FormControl('',Validators.required),
-     title:new FormControl('',Validators.required),
-    territoires:new FormControl('',Validators.required),
-    presentation_creator_id:new FormControl('',Validators.required),
-     
-   })
+  public isLoading:boolean = false;
+  public errorMsg: any;
 
-  constructor(private dataService:DataService,private router:Router) { }
+ presentationForm:FormGroup=new FormGroup({
+   id:new FormControl('',Validators.required),
+    titre:new FormControl('',Validators.required),
+    presentation_creator:new FormControl('',Validators.required),
+
+   
+    
+  })
+
+
+  constructor(private dataService:DataService,private router:Router,private formBuilder:FormBuilder) { }
 
   submit(){
-    const form = this.presentationForm.value;
-    this.dataService.addPresentation(form).subscribe(res=>{
+    this.isLoading = true;
+    this.dataService.addPresentation(this.presentationForm.value).subscribe(res=>{
       console.log(res);
-      this.router.navigate(['listPresentation'])
+      if(res === "this presentation already exist"){
+        this.errorMsg = res;
+
+        this.isLoading = false;
+        return;
+      }
+      this.router.navigate(['list-presentation'])
+    },err=>{
+      console.log(err.statusText);
+      this.errorMsg = err.statusText;
+      this.isLoading = false;
     })
   }
-
-  ngOnInit(): void {
+  getControlValue(name){
+    return this.presentationForm.get(name);
   }
-
-}
+  ngOnInit(): void {
+    
+    
+}}

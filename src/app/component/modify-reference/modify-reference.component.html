@@ -41,31 +41,37 @@
                 <div class="card p-6">
   
                     <form [formGroup]="referenceForm" (ngSubmit)="submit()">
-  
-                        <div class="form-group">
-                            <input type="text" class="form-control" aria-describedby="reference name" formControlName="title"/>
-                            <label>Presentation Name</label>
-                        </div>
-  
-  
-  
-  
-  
-                      
-  
-  
+
                         <div class="form-group mt-2">
-                            <input type="text" class="form-control" aria-describedby="reference name" formControlName="title"/>
-                            <label>title</label>
+                            <label>titre</label>
+
+                            <input type="text" class="form-control" aria-describedby="reference titre" formControlName="titre"[class.is-invalid]="
+                            getControlValue('titre').invalid &&
+                            getControlValue('titre').touched
+                          " required/>
                         </div>
   
                         <div class="form-group">
-                          <input type="text" class="form-control" aria-describedby="reference description" formControlName="description"/>
-                          <label>description</label>
+                            <label>description</label>
+                          <input type="text" class="form-control" aria-describedby="reference description" formControlName="description" [class.is-invalid]="
+                          getControlValue('description').invalid &&
+                          getControlValue('description').touched
+                        " required/>
+                         
                       </div>
                         <div class="form-group">
-                          <input type="submit" class="form-control btn btn-dark" aria-describedby="reference tags" value="Save reference" />
-  
+                            <button
+                            mat-flat-button
+                            type="submit"
+                            color="primary"
+                            style="width: 100%;"
+                            [disabled]="referenceForm.invalid || isLoading"
+                          >
+                            <span *ngIf="!isLoading">Modify reference</span>
+                            <div *ngIf="isLoading" class="spinner-border" role="status">
+                              <span class="sr-only">Loading...</span>
+                            </div>
+                          </button>
                       </div>
   
   

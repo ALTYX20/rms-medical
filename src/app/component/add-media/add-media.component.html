@@ -48,126 +48,107 @@
             aria-labelledby="basic-info-tab"
         >
             <div class="card p-6">
-                <form [formGroup]="ImageForm" (ngSubmit)="submit()">
+                <form [formGroup]="MediaForm" (ngSubmit)="submit()">
+                
                     <div class="row">
                     
 
                 
 
                         <div class="form-group col-6">
+                            <label>titre</label>
                             <input
                                 type="text"
                                 class="form-control"
-                                aria-describedby="type"
+                               
                                 formControlName="type"
+                                aria-describedby="description"
+                                formControlName="description"
+                                [class.is-invalid]="
+                            getControlValue('titre').invalid &&
+                            getControlValue('titre').touched"
+                                required
                             />
-                            <label>type</label>
+                           
                         </div>
                    
 
                     
-                        <div class="form-group col-6">
+                        <div class="form-group row-6">
+                            <label>description</label>
                             <textarea
                                 type="text"
                                 class="form-control"
                                 aria-describedby="description"
-                                formControlName="description"></textarea>
-                            <label>description</label>
+                                formControlName="description" 
+                                [class.is-invalid]="
+                            getControlValue('description').invalid &&
+                            getControlValue('description').touched"
+                                required></textarea>
+                           
+                        </div>
+                        <div class="form-group col-6">
+                            <label>lien</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                               
+                                formControlName="type"
+                                aria-describedby="description"
+                                formControlName="description"
+                                [class.is-invalid]="
+                            getControlValue('lien').invalid &&
+                            getControlValue('lien').touched"
+                                required
+                            />
+                           
+                        </div>
+                        
+                    <div class="form-group">
+                        <button>
+                        <input type="file" (change)="onFileChange($event)" />
+                       
+                    </button>
+                        </div>
+                     
+                        <div class="form-group col-6">
+                            <label>type</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                               
+                                formControlName="type"
+                                aria-describedby="description"
+                                formControlName="description"
+                                [class.is-invalid]="
+                            getControlValue('type').invalid &&
+                            getControlValue('type').touched"
+                                required
+                            />
+                           
                         </div>
                     </div>
-
-
-                      <div class="form-group">
-                        <input type="file" (change)="onFileChange($event)" />
-                            <input
-                                type="submit"
-                                class="form-control btn btn-dark"
-                                aria-describedby="presentation add"
-                                value="add image"
-                            />
+                    <div class="form-group">
+                                 
+                        <button
+                        mat-flat-button
+                        type="submit"
+                        color="primary"
+                        style="width: 100%;"
+                        
+                      >
+                        <span *ngIf="!isLoading">Add Media</span>
+                        <div *ngIf="isLoading" class="spinner-border" role="status">
+                          <span class="sr-only">Loading...</span>
                         </div>
+                      </button>
+                    
+                        </div>
+
                     </form>
              
-                        <form [formGroup]="VideoForm" (ngSubmit)="submit()">
-                            <div class="row">
-                            
-        
                         
-        
-                                <div class="form-group col-6">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        aria-describedby="type"
-                                        formControlName="type"
-                                    />
-                                    <label>type</label>
-                                </div>
-                           
-        
-                            
-                                <div class="form-group col-6">
-                                    <textarea
-                                        type="text"
-                                        class="form-control"
-                                        aria-describedby="description"
-                                        formControlName="description"></textarea>
-                                    <label>description</label>
-                                </div>
-                            </div>
-        
-        
-                              <div class="form-group">
-                                <input type="file" (change)="onFileChange($event)" />
-                                    <input
-                                        type="submit"
-                                        class="form-control btn btn-dark"
-                                        aria-describedby="presentation add"
-                                        value="add video"
-                                    />
-
-                                </div>
-                            </form>
-                            <form [formGroup]="pdfForm" (ngSubmit)="submit()">
-                                <div class="row">
-                                
-            
-                            
-            
-                                    <div class="form-group col-6">
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            aria-describedby="type"
-                                            formControlName="type"
-                                        />
-                                        <label>type</label>
-                                    </div>
-                               
-            
-                                
-                                    <div class="form-group col-6">
-                                        <textarea
-                                            type="text"
-                                            class="form-control"
-                                            aria-describedby="description"
-                                            formControlName="description"></textarea>
-                                        <label>description</label>
-                                    </div>
-                                </div>
-            
-            
-                                  <div class="form-group">
-                                    <input type="file" (change)="onFileChange($event)" />
-                                        <input
-                                            type="submit"
-                                            class="form-control btn btn-dark"
-                                            aria-describedby="presentation add"
-                                            value="add pdf"
-                                        />
-    
-                                    </div>
-                                </form>
+                             
                       </div>
                    
                  
@@ -176,3 +157,4 @@
     </div>
         </div>
   </div>
+  
