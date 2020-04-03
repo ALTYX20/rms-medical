@@ -41,7 +41,7 @@
             <!-- / SEARCH -->
   
             <div class="col-auto">
-                <a [routerLink]="['/add-reference']" routerLinkActive="router-link-active"  class="btn btn-light">ADD Reference</a>
+                <a [routerLink]="['/addreference']" routerLinkActive="router-link-active"  class="btn btn-light">ADD Reference</a>
             </div>
   
         </div>
@@ -62,7 +62,7 @@
   
                         <th>
                             <div class="table-header">
-                                <span class="column-title">Titre</span>
+                                <span class="column-title">Title</span>
                             </div>
                         </th>
   
@@ -88,19 +88,21 @@
   
                     <tr *ngFor="let item of references">
                       <td>{{item.id}}</td>
-                    
-                      <td>{{item.titre}}</td>
+                      <td>
+                          <img class="product-image" [src]="item.logo">
+                      </td>
+                      <td>{{item.title}}</td>
                       <td>{{item.description}}</td>
                      
                       
                       
                       <td>
-                        <button type="button" (click)="modifyReference(item)" class="btn btn-icon" aria-label="reference details">
-                            <i class="icon icon-pencil s-4"></i>
+                          <button type="button" (click)="modifyReference(item)" class="btn btn-icon" aria-label="reference details">
+                              <i class="icon icon-pencil s-4"></i>
+                          </button>
+                          <button type="button" (click)="deleteReference(item.id)" class="btn btn-icon" aria-label="Product details">
+                            <i class="icon icon-trash s-4"></i>
                         </button>
-                        <button type="button" (click)="deleteReference(item.id)" class="btn btn-icon" aria-label="reference resentation details">
-                          <i class="icon icon-trash s-4"></i>
-                      </button>
                       </td>
                   </tr>
   

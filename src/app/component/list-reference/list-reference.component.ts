@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { DataService } from 'src/app/services/data.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-list-reference',
@@ -10,14 +10,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ListReferenceComponent implements OnInit {
 
-  references:any[];
+  references:any[] = [];
 
-  constructor(private dataService:DataService,private route: ActivatedRoute, private router: Router,private formBuilder:FormBuilder) { }
+  constructor(private dataService:DataService,private route: ActivatedRoute, private router: Router) { }
 
 
 
     ngOnInit(): void {
-      this.dataService.getReferenceDetails().subscribe(res=>{
+      this.dataService.getRefList().subscribe(res=>{
         this.references = res;
       },err=>console.log(err));
     }
@@ -26,7 +26,7 @@ export class ListReferenceComponent implements OnInit {
  
 
     deleteReference(id){
-      this.dataService.deleteReference(id).subscribe(res=>{
+      this.dataService.deleteRef(id).subscribe(res=>{
         console.log(res)
         //if (res === "")
         for(let p of this.references){
@@ -38,8 +38,9 @@ export class ListReferenceComponent implements OnInit {
         }
       })
     }
+
   modifyReference(item){
-      this.router.navigateByUrl('/modify-reference', { state: item });
+      this.router.navigateByUrl('/modifyreference', { state: item });
     }
   }
 

@@ -12,7 +12,7 @@ export class AddcompanyComponent implements OnInit {
   public errorMsg: any;
   public isLoading:boolean = false;
 
-  public productForm:FormGroup=new FormGroup({
+  public companyForm:FormGroup=new FormGroup({
     name:new FormControl('test',Validators.required),
     email:new FormControl('test',Validators.required),
     adresse:new FormControl('test',Validators.required),
@@ -33,13 +33,13 @@ export class AddcompanyComponent implements OnInit {
   constructor(private dataService:DataService,private router:Router) { }
 
   submit(){
-    let data = this.productForm.value;
+    let data = this.companyForm.value;
     let time = Date.now();
     let subperiod = this.MonthToMs(Number(data.period_subscription));
     let date = new Date(time + subperiod);
     data.period_subscription = date.toISOString();
     this.isLoading = true;
-    this.dataService.addCompany(this.productForm.value).subscribe(res=>{
+    this.dataService.addCompany(this.companyForm.value).subscribe(res=>{
       console.log(res);
       if(res === "company already exist"){
         this.errorMsg = res;
@@ -59,7 +59,7 @@ export class AddcompanyComponent implements OnInit {
   }
 
   getControlValue(name){
-    return this.productForm.get(name);
+    return this.companyForm.get(name);
   }
 
   ngOnInit(): void {

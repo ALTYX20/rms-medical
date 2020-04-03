@@ -49,64 +49,57 @@
         >
             <div class="card p-6">
                 <form [formGroup]="referenceForm" (ngSubmit)="submit()">
-                
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            aria-describedby="title"
+                                    formControlName="title"
+                        />
+                        <label>Reference</label>
+                    </div>
+
                     <div class="row">
-                       
+                        <div class="form-group col-6">
+                            <input
+                                type="number"
+                                class="form-control"
+                                aria-describedby="id"
+                                formControlName="id"
+                            />
+                            <label>id</label>
+                        </div>
 
                         <div class="form-group col-6">
-                            <label>titre</label>
                             <input
                                 type="text"
                                 class="form-control"
-                                aria-describedby="titre"
-                                formControlName="titre"
-                                [class.is-invalid]="
-                                getControlValue('titre').invalid &&
-                                getControlValue('titre').touched
-                              "
-                                required
+                                aria-describedby="title"
+                                formControlName="title"
                             />
-                            <div class="invalid-feedback">
-                                this field is required.
-                              </div>
+                            <label>title</label>
                         </div>
-                      
-                       
-                    </div>
+                   
 
                     
-                        <div class="form-group col-10">
-                            <label>description</label>
-                            <textarea
+                        <div class="form-group col-6">
+                            <input
                                 type="text"
                                 class="form-control"
                                 aria-describedby="description"
                                 formControlName="description"
-                                [class.is-invalid]="
-                                getControlValue('description').invalid &&
-                                getControlValue('description').touched
-                              "
-                                required
-                            ></textarea>
-                            <div class="invalid-feedback">
-                                this field is required.
-                              </div>
+                            />
+                            <label>description</label>
                         </div>
 
-                    
+                      </div>
                       <div class="form-group">
-                        <button
-                        mat-flat-button
-                        type="submit"
-                        color="primary"
-                        style="width: 100%;"
-                        [disabled]="referenceForm.invalid || isLoading"
-                      >
-                        <span *ngIf="!isLoading">Add Reference</span>
-                        <div *ngIf="isLoading" class="spinner-border" role="status">
-                          <span class="sr-only">Loading...</span>
-                        </div>
-                      </button>
+                            <input
+                                type="submit"
+                                class="form-control btn btn-dark"
+                                aria-describedby="Referenceadd"
+                                value="Add Reference"
+                            />
                         </div>
                    
                    </form>

@@ -52,7 +52,7 @@
         aria-labelledby="basic-info-tab"
       >
         <div class="card p-6">
-          <form [formGroup]="productForm" (ngSubmit)="submit()">
+          <form [formGroup]="companyForm" (ngSubmit)="submit()">
             <div class="form-group">
               <label>Photo</label>
               <input
@@ -302,7 +302,7 @@
                   type="submit"
                   color="primary"
                   style="width: 100%;"
-                  [disabled]="productForm.invalid || isLoading"
+                  [disabled]="companyForm.invalid || isLoading"
                 >
                   <span *ngIf="!isLoading">Add Company</span>
                   <div *ngIf="isLoading" class="spinner-border" role="status">

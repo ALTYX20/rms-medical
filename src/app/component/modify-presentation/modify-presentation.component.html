@@ -42,52 +42,30 @@
   
                     <form [formGroup]="presentationForm" (ngSubmit)="submit()">
   
+                        <div class="form-group">
+                            <input type="text" class="form-control" aria-describedby="presentation name" formControlName="title"/>
+                            <label>Presentation Name</label>
+                        </div>
+  
+  
+  
+  
+  
+                      
+  
+  
                         <div class="form-group mt-2">
-                            <label>titre</label>
-                            <input type="text" class="form-control" aria-describedby="titre" formControlName="titre"  [class.is-invalid]="
-                            getControlValue('titre').invalid &&
-                            getControlValue('titre').touched
-                          " required/>
-                          
+                            <input type="text" class="form-control" aria-describedby="presentation name" formControlName="title"/>
+                            <label>title</label>
                         </div>
   
                         <div class="form-group">
-                            <label>territories</label>
-                          <input type="text" class="form-control"  [class.is-invalid]="
-                          getControlValue('territories').invalid &&
-                          getControlValue('territories').touched
-                        "aria-describedby="territories" formControlName="territories" required/>
-                        
+                          <input type="text" class="form-control" aria-describedby="presentation territories" formControlName="territories"/>
+                          <label>Territories</label>
                       </div>
-                      <div class="form-group">
-                        <label>project</label>
-                        <input type="text" class="form-control"  [class.is-invalid]="
-                        getControlValue('project').invalid &&
-                        getControlValue('project').touched
-                      "aria-describedby="project" formControlName="project" required/>
-                        
-                    </div>
-                    <div class="form-group">
-                        <label>media</label>
-                        <input type="text" class="form-control" aria-describedby="media" formControlName="media" [class.is-invalid]="
-                        getControlValue('media').invalid &&
-                        getControlValue('media').touched
-                      " required/>
-                        
-                    </div>
-                    <div class="form-group">
-                        <button
-                          mat-flat-button
-                          type="submit"
-                          color="primary"
-                          style="width: 100%;"
-                          [disabled]="presentationForm.invalid || isLoading"
-                        >
-                          <span *ngIf="!isLoading">Modify Presentation</span>
-                          <div *ngIf="isLoading" class="spinner-border" role="status">
-                            <span class="sr-only">Loading...</span>
-                          </div>
-                        </button>
+                        <div class="form-group">
+                          <input type="submit" class="form-control btn btn-dark" aria-describedby="presentation tags" value="Save presentation" />
+  
                       </div>
   
   

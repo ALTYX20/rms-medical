@@ -9,18 +9,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { ModifyPresentationComponent } from './component/modify-presentation/modify-presentation.component';
-import { ModifyReferenceComponent } from './component/modify-reference/modify-reference.component';
-import { AddMediaComponent } from './component/add-media/add-media.component';
-import { ListMediaComponent } from './component/list-media/list-media.component';
-import { ModifyMediaComponent } from './component/modify-media/modify-media.component';
-
-import { RouterModule } from '@angular/router';
-import { AddReferenceComponent } from './component/add-reference/add-reference.component';
-import { ListReferenceComponent } from './component/list-reference/list-reference.component';
-import { AddPresentationComponent } from './component/add-presentation/add-presentation.component';
-
-import { ListPresentationComponent } from './component/list-presentation/list-presentation.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -51,15 +39,12 @@ import {MatListModule} from '@angular/material/list';
 import {MatStepperModule} from '@angular/material/stepper';
 // import {MatTabsModule} from '@angular/material/tabs';
 // import {MatExpansionModule} from '@angular/material/expansion';
-import {MatButtonModule} from '@angular/material/button';
-
 // import {MatButtonToggleModule} from '@angular/material/button-toggle';
 // import {MatChipsModule} from '@angular/material/chips';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 // import {MatProgressBarModule} from '@angular/material/progress-bar';
 // import {MatDialogModule} from '@angular/material/dialog';
- import { MatToolbarModule, } from '@angular/material/toolbar';
 // import {MatTooltipModule} from '@angular/material/tooltip';
 // import {MatSnackBarModule} from '@angular/material/snack-bar';
 // import {MatTableModule} from '@angular/material/table';
@@ -72,12 +57,21 @@ import { ListprojectComponent } from './component/listproject/listproject.compon
 import { AddprojectComponent } from './component/addproject/addproject.component';
 import { AddcompanyComponent } from './component/addcompany/addcompany.component';
 import { ListcompanyComponent } from './component/listcompany/listcompany.component';
-
+import { ListpresentationComponent } from './component/listpresentation/listpresentation.component';
+import { AddpresentationComponent } from './component/addpresentation/addpresentation.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { AddComponent } from './add/add.component';
 import { ModifyproductComponent } from './component/modifyproduct/modifyproduct.component';
 import { ModifyprojectComponent } from './component/modifyproject/modifyproject.component';
 import { ModifycompanyComponent } from './component/modifycompany/modifycompany.component';
+import { ModifyPresentationComponent } from './component/modify-presentation/modify-presentation.component';
+import { ListReferenceComponent } from './component/list-reference/list-reference.component';
+import { AddReferenceComponent } from './component/add-reference/add-reference.component';
+import { ModifyReferenceComponent } from './component/modify-reference/modify-reference.component';
+
+import { ListMediaComponent } from './component/list-media/list-media.component';
+import { ModifymediaComponent } from './component/modifymedia/modifymedia.component';
+import { AddMediaComponent } from './component/add-media/add-media.component';
 
 @NgModule({
   declarations: [
@@ -101,16 +95,10 @@ import { ModifycompanyComponent } from './component/modifycompany/modifycompany.
 
     ListcompanyComponent,
 
-    ListPresentationComponent,
+    ListpresentationComponent,
 
-    AddPresentationComponent,
-    ModifyMediaComponent,
-    ModifyPresentationComponent,
-    ModifyReferenceComponent,
-    ListMediaComponent,
-    ListReferenceComponent,
-AddMediaComponent,
-AddReferenceComponent,
+    AddpresentationComponent,
+
     DashboardComponent,
 
     AddComponent,
@@ -119,7 +107,15 @@ AddReferenceComponent,
 
     ModifyprojectComponent,
 
-    ModifycompanyComponent
+    ModifycompanyComponent,
+
+    ModifyPresentationComponent,
+    ListReferenceComponent,
+    AddReferenceComponent,
+    ModifyReferenceComponent,
+    AddMediaComponent,
+    ListMediaComponent,
+    ModifymediaComponent
   ],
   imports: [
     BrowserModule,
@@ -141,7 +137,7 @@ AddReferenceComponent,
     // MatToolbarModule,
     MatListModule,
     // MatGridListModule,
-    MatToolbarModule, 
+    // MatCardModule,
     MatStepperModule,
     // MatTabsModule,
     // MatExpansionModule,
@@ -156,7 +152,6 @@ AddReferenceComponent,
     // MatTableModule,
     // MatSortModule,
     // MatPaginatorModule,
-
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
@@ -169,7 +164,6 @@ AddReferenceComponent,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
     }
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
